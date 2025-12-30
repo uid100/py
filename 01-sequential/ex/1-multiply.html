@@ -1,0 +1,141 @@
+<div class="card">
+    <div class="card-header bg-primary text-center text-white">
+        Exercise 1: Multiply 2 Numbers
+    </div> <!-- .card-header -->
+    <div class="card-body">
+        <h3>A Guided Python Application</h3>
+        <div id="guided" class="ic-flash-info">
+            <p>For most of the labs in this class, the first exercise will be a guided walk
+                through where we will apply the chapter concepts to develop a working Python
+                application.
+            </p>
+        </div> <!-- #guided -->
+        <div id="ex1-intro">
+            <p>In this exercise, you will be guided through the steps of analyzing a problem
+                statement and creating a working Python application using Python IDLE
+                (Integrated Development and Learning Environment). Be sure to complete this
+                exercise as you will be repeating these steps and writing the same (or very
+                similar) code for the other exercises.
+            </p>
+            <p style="font-style: italic;">Be aware, practice is the key here. The more you do,
+                the easier it gets!
+            </p>
+        </div> <!-- #ex1-intro -->
+        <div id="analysis">
+            <p>Step one is <strong><i>always</i></strong> to analyze the problem and figure out
+                a plan of attack. Consider the following problem statement.
+            </p>
+            <div id="problem" class="ic-flash-info">
+                <p>Problem statement:</p>
+                <p>
+                    <del> It&rsquo;s a bright, sunny day and the College Learning Center has hired you
+                        as a consultant to develop an application that will </del>
+                    accept two input numbers from the user and display the product of the two
+                    <del>values</del> numbers.
+                </p>
+            </div>
+            <p>Break it down into <strong>input, process and output</strong>.</p>
+            <p>This is a simple problem and we can easily break it down into &ldquo;workable
+                pieces&rdquo; using this approach.
+            </p>
+            <p><em>What input do we need?</em>&nbsp;&nbsp;&nbsp; <strong>We need 2 numbers.</strong>
+            </p>
+            <p>We can logically name these <code>number1</code> and <code>number2</code></p>
+            <p><em>What is our process?</em>&nbsp;&nbsp;&nbsp; <strong>We need to multiply the 2
+                    numbers.</strong><br />Our formula is:</p>
+            <pre>product = number1 * number2</pre>
+            <p>&nbsp;</p>
+            <p>The result of multiplying two numbers is called the <code>product</code>.
+            </p>
+            <p ckass="ic-flash-info">Variable names must always be:
+            <ul>
+                <li>Meaningful</li>
+                <li>Descriptive</li>
+                <li>Concise</li>
+            </ul>
+            </p>
+            <p><em>What is our output?</em>&nbsp;&nbsp;&nbsp; <strong>We need to display the
+                    product.</strong>
+            </p>
+        </div> <!-- #analysis -->
+        <div id="ex1-code">
+            <h3>Logic <i>Pseudocode</i> &amp; Python Source Code</h3>
+            <h4>Steps</h4>
+            <ol>
+                <li>Start Python IDLE.</li>
+                <li>From the File menu, click New File<br /><img
+                        src="/course-content/images/lab01_fig1_menu_file_new.jpg"
+                        alt="IDLE menu  File &gt; New " width="323" /></li>
+                <li>Create a new file and save as
+                    <pre>multiply.py</pre>
+                    to your Lab 1 folder. Note that Python source files must have the .py
+                    extension.<br />If
+                    IDLE is saving as type <em>Python Files</em>, then the extension will be
+                    assigned
+                    for
+                    you.
+                    If you try and enter "multiply.py", you may end up with a file named
+                    "multiply.py.py".
+                    This
+                    is why it is important to enable file extensions in the <em>Before you
+                        begin</em>
+                    tab.<br /><img src="/course-content/images/lab01_fig4_save_py.jpg"
+                        alt="Save As Python (.py) file" />
+                </li>
+                <li>
+                    <ul>Write the code shown in the Python code screenshot below. Pay close
+                        attention to
+                        letter
+                        case. Note the following things we will be doing for virtually every lab
+                        exercise:
+                        <li>Be sure to code the shebang line #!/user/bin/env python3. This
+                            identifies
+                            the
+                            file
+                            as an executable Python script file.</li>
+                        <li>In comments at the top, put in your name, course number and the lab
+                            exercise
+                            information. See sample below.</li>
+                        <li>Use the input() method for getting user input.</li>
+                        <li>Use the print() method for displaying output.</li>
+                        <li>Use the int() method to convert text to an integer.</li>
+                        <li>Use the float() method to convert text to a float.</li>
+                        <li>Use the str() method to convert an integer value to string.</li>
+                        <li>The program code should follow the pseudocode!</li>
+                        <li>In Python, anything after a single hash (#) character is a comment.</li>
+                    </ul>
+                    <p>Here&rsquo;s a sample comment header at the top with your name, the course
+                        number,
+                        and a
+                        brief description of the lab exercise.</p>
+                    <p><img src="/course-content/images/PythonHeader.png" alt="Python Header" /></p>
+                    <ul>In the code below, a couple more things to note:
+                        <li>We declare variables using a concise, yet descriptive name.</li>
+                        <li>Python determines the data type by the initial value.</li>
+                        <li>We use a single equal sign (=) for assigning literal values (i.e., 0,
+                            etc.)
+                            or
+                            the
+                            result of an expression to a variable.</li>
+                    </ul>
+                    <p><img src="/course-content/images/lab1_code.jpg"
+                            alt="ex1 guided code solution" width="436" height="308" /></p>
+                    <p><em>Wow! That's a lot!</em></p>
+                </li>
+                <li>Be sure to save your work!</li>
+                <li>Run your application. Select Run Module from the Run menu.<br /><img
+                        src="/course-content/images/lab01_fig5.jpg"
+                        alt="IDLE menu Run &gt; Run Module" /></li>
+                <li>Choose test values so that you can easily verify that your program is producing
+                    the
+                    correct
+                    output. For example:<br /><img src="/course-content/images/lab01_fig6.jpg"
+                        alt="Run with sample test values" /></li>
+                <li>Try (test) your program with different values to be sure it is working.</li>
+                <li>If you get a correct output, congratulations! <br>
+
+                    You have just successfully created your first Python application!</li>
+            </ol>
+        </div> <!-- #ex1-code -->
+    </div> <!-- .card-body -->
+</div> <!-- .card -->
