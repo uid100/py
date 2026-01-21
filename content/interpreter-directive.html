@@ -1,0 +1,154 @@
+    <div class="container mt-4 mb-4">
+        <div class="row justify-content-center mt-6">
+            <!-- REPL -->
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header bg-primary text-center text-white">
+                        hashbang (shebang) directive
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">The Python Interpreter Directive: A Crucial First Step</h5>
+                        <div class="card-text">
+                            <p>
+                                The Python interpreter directive, often referred to as a "shebang" or "hashbang," is a
+                                special line placed at the very beginning of a Python script. It's a comment, but a
+                                special one, recognized and interpreted by the operating system, not the Python
+                                interpreter itself. Its primary purpose is to tell the system which interpreter should
+                                be used to execute the script. This is particularly important in Unix-like environments
+                                (Linux, macOS) where multiple versions of Python might be installed.
+                            </p>
+                            <p>
+                                The directive takes the form <code>#! /path/to/python_interpreter</code>. The
+                                <code>#!</code> signifies that it's a shebang, and
+                                <code>/path/to/python_interpreter</code> specifies the absolute path to the desired
+                                Python executable. For example, <code>#!/usr/bin/python3</code> instructs the system to
+                                use the Python 3 interpreter located at <code>/usr/bin/python3</code>.
+                            </p>
+                            <p>
+                                This ensures that the correct Python interpreter is used to run the script, regardless
+                                of the user's current environment or default Python version. This avoids potential
+                                compatibility issues and ensures consistent script execution. Without it, the system
+                                might try to execute the script using a different Python version, potentially leading to
+                                errors or unexpected behavior.
+                            </p>
+                            <p>
+                                A more flexible and recommended approach is to use <code>/usr/bin/env</code>.
+                            </p>
+                        </div> <!-- card-text -->
+                    </div> <!-- card-body -->
+                    <div class="card-body">
+                        <h5 class="card-title">Example: Using /usr/bin/env</h5>
+                        <div class="card-text">
+                            <p>
+                                Instead of hardcoding the absolute path to a specific Python interpreter, using
+                                <code>#!/usr/bin/env python3</code> is generally preferred. This approach leverages the
+                                <code>env</code> command, which searches the user's <code>PATH</code> environment
+                                variable for the first executable named <code>python3</code>. This offers several
+                                advantages:
+                            </p>
+                            <ul>
+                                <li><b>Portability:</b> Different systems might have Python 3 installed in different
+                                    locations. <code>/usr/bin/env</code> searches the <code>PATH</code>, so the script
+                                    will likely work across different systems as long as Python 3 is in the
+                                    <code>PATH</code>.
+                                </li>
+                                <li><b>Virtual Environments:</b> When working with virtual environments, each
+                                    environment typically has its own Python interpreter. Activating a virtual
+                                    environment modifies the <code>PATH</code> to include the environment's Python
+                                    executable. Using <code>/usr/bin/env python3</code> ensures that the correct Python
+                                    interpreter within the active virtual environment is used.</li>
+                                <li><b>Flexibility:</b> If you have multiple Python 3 versions installed, you can manage
+                                    which one is used by adjusting your <code>PATH</code>. This provides more control
+                                    than hardcoding a specific path.</li>
+                            </ul>
+                        </div> <!-- card-text -->
+                    </div> <!-- card-body -->
+                </div> <!-- card -->
+                <div class="card mt-3">
+                    <div class="card-header bg-primary text-center text-white">
+                        Examples
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Adding a Shebang to a Python Script</h4>
+                        <div class="card-text">
+                            <h5>Example 1.</h5>
+                            <ol>
+                                <li>
+                                    Write the script: <code>greeting.py</code>
+                                    <div style="margin: 10px 10px;">
+                                        <pre>#!/usr/bin/env python3
+
+# Example 1: A simple script to greet the user.
+
+def greet(name):
+    """Greets the user with a personalized message."""
+    print(f"Hello, {name}!")
+
+if __name__ == "__main__":
+    user_name = input("Enter your name: ")
+    greet(user_name)
+</pre>
+                                    </div>
+                                </li>
+                                <li>
+                                    Make the script executable:<br>
+                                    <code>chmod +x greeting.py</code>
+                                </li>
+                                <li>
+                                    Run the script:<br>
+                                    <code>./greeting.py</code>
+                                </li>
+                            </ol>
+                            <p>
+                                If everything is set up correctly, you should see <code>Hello, World!</code> printed to
+                                the terminal. This demonstrates the use of a shebang to specify the Python interpreter
+                                for the script.
+                            </p>
+
+                            <h5>Example 2.</h5>
+                            <ol>
+                                <li>
+                                    Write the script: <code>rectangle_area.py</code>
+                                    <div style="margin: 10px 10px;">
+                                        <pre>#!/usr/bin/env python3
+
+def calculate_rectangle_area(length, width):
+    """Calculates the area of a rectangle."""
+    if not isinstance(length, (int, float)) or not isinstance(width, (int, float)):
+        raise TypeError("Length and width must be numbers.")
+    if length <= 0 or width <= 0:
+        raise ValueError("Length and width must be positive.")
+    return length * width
+
+if __name__ == "__main__":
+    try:
+        length = float(input("Enter the length of the rectangle: "))
+        width = float(input("Enter the width of the rectangle: "))
+        area = calculate_rectangle_area(length, width)
+        print(f"The area of the rectangle is: {area}")
+    except ValueError as e:
+        print(f"Error: {e}")
+    except TypeError as e:
+        print(f"Error: {e}")
+                            </pre>
+                                    </div>
+                                </li>
+                                <li>
+                                    Make the script executable:<br>
+                                    <code>chmod +x rectangle_area.py</code>
+                                </li>
+                                <li>
+                                    Run the script:<br>
+                                    <code>./rectangle_area.py</code>
+                                </li>
+                            </ol>
+                            <div class="alert alert-warning" role="alert">
+                                <strong>Note:</strong> The shebang line is essential for running the script as an
+                                executable. Without it, the system won't know which interpreter to use.
+                            </div>
+                        </div> <!-- card-text -->
+                    </div> <!-- card-body -->
+                </div> <!-- card -->
+            </div> <!-- col-md-8 -->
+        </div> <!-- row -->
+    </div> <!-- container -->
