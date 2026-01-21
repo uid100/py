@@ -1,32 +1,42 @@
-<div id="page">
-    <div id="python" style="padding: 20px;">
-        <h3 class="alert">Using Python and IDLE</h3>
-        <p>In just about every programming language, we start out with a simple <em>Hello World</em> program.</p>
-        <p>This gives us a chance to become familiar with the IDE, some simple code and running a program.</p>
-        <p>Start out by downloading and installing Python.</p>
-        <p><a href="https://www.python.org/downloads/">Python Download</a></p>
-        <p>After you install Python to your system, run the following command to make sure everything is working correctly.</p>
-        <div style="margin-left: 60px; margin-right: 60px;">
-            <pre>python3 --version</pre>
+<div class="container">
+    <div class="card" style="margin: 10px;">
+        <div class="card-header">
+            <h2>Hello World</h2>
         </div>
-    </div> <!-- #python -->
-    <div id="hello-world" style="padding: 20px;">
-        <h3 class="alert">Hello World</h3>
-        <p>Open IDLE and create a new file. Save it with a meaningful name, such as <em>helloworld.py</em>. The <em>.py</em> extension is important.</p>
-        <p>Copy the following code into your file, save it and run it.</p>
-        <div style="margin-left: 60px; margin-right: 60px;">
-            <pre>#!/usr/bin/env python3
+        <div class="card-body">
+            <p>The traditional first program for learning a new programming language is to write a program that displays the words <em>Hello World</em> on the screen.</p>
+            <p>In this lesson, we will write a simple <em>Hello World</em> program using Python and IDLE.</p>
+
+            <h3 class="alert">Using Python and IDLE</h3>
+            <p>In just about every programming language, we start out with a simple <em>Hello World</em> program.</p>
+            <p>This gives us a chance to become familiar with the IDE, some simple code and running a program.</p>
+            <p>Start out by downloading and installing Python.</p>
+            <p><a href="https://www.python.org/downloads/">Python Download</a></p>
+            <p>After you install Python to your system, run the following command to make sure everything is working correctly.</p>
+            <div style="margin-left: 60px; margin-right: 60px;">
+                <pre>python3 --version</pre>
+            </div>
+
+            <div id="hello-world" style="padding: 20px;">
+                <p>
+                    Open IDLE and create a new file. Save it with a meaningful name, such as 
+                    <em>helloworld.py</em>. The <em>.py</em> extension is important.</p>
+                <p>
+                    Copy the following code into your file, save it and run it.</p>
+                <div id="code-block"style="margin-left: 60px; margin-right: 60px;">
+                    <pre>#!/usr/bin/env python3
 
 # Lines starting with a hash (#) are comments so this is a comment
 print("Hello world!")
-    </pre>
-        </div>
-        <p>What happened?</p>
-        <p>The first line also contains a comment, but this is a special line which needs to be on all of your Python code. It is called a compiler directive and tells the operating system to run the program using Python.</p>
-        <p>This line is called the <em>shebang!</em> and we'll talk more about it later.</p>
-    </div>
+                    </pre>
+                </div> <!-- #code-block -->
 
-    <div id="footer" style="padding: 20px;">
-        <p style="text-align: center;"><em>Use the</em> <strong>[ Next &gt; ]</strong> <em> button to continue.</em></p>
-    </div>
-</div> <!-- #page -->
+                <p>What happened?</p>
+                <p>The first line also contains a comment, but this is a special line which needs 
+                    to be on all of your Python code. It is called a compiler directive and tells 
+                    the operating system to run the program using Python.</p>
+                <p>This line is called the <em>shebang!</em> and we'll talk more about it later.</p>
+            </div> <!-- #hello-world -->
+        </div> <!-- .card-body -->
+    </div> <!-- .card -->
+</div> <!-- .container -->
