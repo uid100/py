@@ -1,0 +1,473 @@
+
+<div class="container my-4">
+
+  <!-- Python — Making Decisions -->
+  <div class="card mb-4" id="python">
+    <div class="card-header">
+      <button class="btn btn-link w-100 text-start text-decoration-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-python"
+              aria-expanded="false"
+              aria-controls="collapse-python">
+        <strong>Making Decisions - Demo Code</strong>
+      </button>
+    </div>
+    <div id="collapse-python" class="collapse">
+      <div class="card-body">
+        <p>Open this code in IDLE, walk through the source to see if you can follow all that is going on before you try and run it. After you run the code, try changing around a few lines to see what happens.</p>
+        <p>In this module, we learn about selection structures where code executes based on the result of a condition. We also learn about relational operators such as less than (&lt;), greater than (&gt;), etc. The tricky ones to watch out for in Python are the equality operator == (double equal signs) and the inequality operator != Java, C++ and C# also use these relational operators. We also learn about logical operators.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Compare Values -->
+  <div class="card mb-4" id="compare-values">
+    <div class="card-header">
+      <button class="btn btn-link w-100 text-start text-decoration-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-compare-values"
+              aria-expanded="false"
+              aria-controls="collapse-compare-values">
+        <strong>Compare Values</strong>
+      </button>
+    </div>
+    <div id="collapse-compare-values" class="collapse">
+      <div class="card-body">
+        <p>Open IDLE and create a new file. Save it with a meaningful name. Copy the following code into your file, save it and run it.</p>
+        <p>Notice that <code>(num_val1 &gt; num_val2)</code> <strong>always</strong> evaluates to true or false, regardless of what the numbers are. The expression will never equal a number!</p>
+        <div id="compare-values-code" class="px-3 px-md-5">
+          <pre>#!/usr/bin/env python3
+
+# compare numbers and strings demo
+
+# Declare variables
+num_val1 = 0
+num_val2 = 0
+str_val1 = ""
+str_val2 = ""
+
+# Let's compare numbers!
+# get numeric input
+num_val1 = int(input("Enter first number: "))
+num_val2 = int(input("Enter second number: "))
+
+# compare numbers
+if num_val1 == num_val2:
+    # values are equal
+    print("values are equal")
+elif num_val1 &lt; num_val2:
+    # val1 &lt; val2
+    print("value1 &lt; value2")
+else:
+    # value1 &gt; value2
+    print("value1 &gt; value2")
+
+# Let's compare strings!
+# get 2 strings for input
+str_val1 = input("Enter first string: ")
+str_val2 = input("Enter second string: ")
+
+# compare strings - convert both strings to either all upper() or lower() case
+# or use casefold() to do a case insensitive comparison
+if str_val1.casefold() == str_val2.casefold():
+    # values are equal
+    print("string values are equal")
+else:
+    # value1 &gt; value2
+    print("String values are not equal")
+
+</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Payroll Demo -->
+  <div class="card mb-4" id="payroll-demo">
+    <div class="card-header">
+      <button class="btn btn-link w-100 text-start text-decoration-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-payroll-demo"
+              aria-expanded="false"
+              aria-controls="collapse-payroll-demo">
+        <strong>Payroll Demo</strong>
+      </button>
+    </div>
+    <div id="collapse-payroll-demo" class="collapse">
+      <div class="card-body">
+        <div id="payroll-demo-code" class="px-3 px-md-5">
+          <pre>#!/usr/bin/env python3
+
+# add 2 numbers demo
+
+# import locale to do currency formatting
+import locale
+locale.setlocale(locale.LC_ALL, 'en-US')
+
+
+# Declare variables and constants
+HOURS_IN_WEEK = 40
+OVERTIME_RATE = 1.5
+DENTAL_PREMIUM = 35.00
+YES = 'Y'
+hours_worked = 0.0
+pay_rate = 0.0
+pay = 0.0
+deduct_dental = "N"
+
+
+# get input
+hours_worked = float(input("Enter hours worked: "))
+pay_rate = float(input("Enter pay rate: "))
+deduct_dental = input("Deduct dental premium (Y/N): ")
+print("deduct_dental = " + deduct_dental)
+
+# process - calculate gross pay
+# indent 4 spaces for code in the true and false blocks
+if hours_worked &lt;= 40:
+# normal work week
+pay = hours_worked * pay_rate
+else:
+# calculate with overtime
+pay = (pay_rate * HOURS_IN_WEEK) + ((hours_worked - HOURS_IN_WEEK) * (OVERTIME_RATE * pay_rate))
+
+# Real world stuff the book leaves out: Social Security, Fed &amp; state tax, etc
+# check for dental deduction the casefold() method does case insensitive comparison
+if deduct_dental.upper() == "Y":
+pay = pay - DENTAL_PREMIUM
+
+
+# output - display pay
+print("Total = " + locale.currency(pay, grouping=True))
+</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Phone bill using logical AND -->
+  <div class="card mb-4" id="phonebill-using-AND">
+    <div class="card-header">
+      <button class="btn btn-link w-100 text-start text-decoration-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-phonebill-and"
+              aria-expanded="false"
+              aria-controls="collapse-phonebill-and">
+        <strong>Phone bill using logical AND operator</strong>
+      </button>
+    </div>
+    <div id="collapse-phonebill-and" class="collapse">
+      <div class="card-body">
+        <div id="phonebill-using-AND-code" class="px-3 px-md-5">
+          <pre>#!/usr/bin/env python3
+
+# logical AND demo
+
+# import locale to do currency formatting
+import locale
+locale.setlocale(locale.LC_ALL, 'en-US') # use "en_US" on Mac
+
+# Declare variables and constants
+CALLS = 100
+MINUTES = 500
+BASIC_SERVICE = 30.00
+ADD_PREMIUM = 20.00
+
+customer_id = ""
+calls_made = 0
+call_minutes = 0
+customer_bill = BASIC_SERVICE # start with basic service and accumulate from there...
+
+# input - get customer ID, calls, minutes
+customer_id = input("Enter Customer ID #: ")
+calls_made = int(input("Enter number of calls: "))
+call_minutes = int(input("Enter number of minutes: "))
+
+# process - calculate bill using the AND operator. Both conditions must be true
+if calls_made &gt; CALLS and call_minutes &gt; MINUTES:
+    customer_bill = customer_bill + ADD_PREMIUM
+
+
+# output - display customer bill
+print("Total = " + locale.currency(customer_bill, grouping=True))
+
+</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Phone bill using logical OR -->
+  <div class="card mb-4" id="phonebill-using-OR">
+    <div class="card-header">
+      <button class="btn btn-link w-100 text-start text-decoration-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-phonebill-or"
+              aria-expanded="false"
+              aria-controls="collapse-phonebill-or">
+        <strong>Phone bill using logical OR operator</strong>
+      </button>
+    </div>
+    <div id="collapse-phonebill-or" class="collapse">
+      <div class="card-body">
+        <!-- fixed duplicate id: was payroll-demo-code; now phonebill-using-OR-code -->
+        <div id="phonebill-using-OR-code" class="px-3 px-md-5">
+          <pre>#!/usr/bin/env python3
+
+# Logical OR demo
+
+# import locale to do currency formatting
+import locale
+locale.setlocale(locale.LC_ALL, 'en-US') # use "en_US" on Mac
+
+# Declare variables and constants
+CALLS = 100
+MINUTES = 500
+BASIC_SERVICE = 30.00
+ADD_PREMIUM = 20.00
+
+customer_id = ""
+calls_made = 0
+call_minutes = 0
+customer_bill = BASIC_SERVICE # start with basic service and accumulate from there...
+
+# input - get customer ID, calls, minutes
+customer_id = input("Enter Customer ID #: ")
+calls_made = int(input("Enter number of calls: "))
+call_minutes = int(input("Enter number of minutes: "))
+
+# process - calculate bill. Page 84, the business rule changed:
+# charge the premium if calls made &gt; 100 OR minutes &gt; 500
+if calls_made &gt; CALLS or call_minutes &gt; MINUTES:
+    customer_bill = customer_bill + ADD_PREMIUM
+
+
+# output - display customer bill
+print("Total = " + locale.currency(customer_bill, grouping=True))
+</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Phone bill using nested if -->
+  <div class="card mb-4" id="phonebill-using-IF">
+    <div class="card-header">
+      <button class="btn btn-link w-100 text-start text-decoration-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-phonebill-if"
+              aria-expanded="false"
+              aria-controls="collapse-phonebill-if">
+        <strong>Phone bill using nested <em>if</em></strong>
+      </button>
+    </div>
+    <div id="collapse-phonebill-if" class="collapse">
+      <div class="card-body">
+        <div id="phonebill-using-IF-code" class="px-3 px-md-5">
+          <pre>#!/usr/bin/env python3
+
+# nested if demo
+
+# import locale to do currency formatting
+import locale
+locale.setlocale(locale.LC_ALL, 'en-US')  # use "en_US" on Mac
+
+# Declare variables and constants
+CALLS = 100
+MINUTES = 500
+BASIC_SERVICE = 30.00
+ADD_PREMIUM = 20.00
+
+customer_id = ""
+calls_made = 0
+call_minutes = 0
+# start with basic service and accumulate from there...
+customer_bill = BASIC_SERVICE
+
+# input - get customer ID, calls, minutes
+customer_id = input("Enter Customer ID #: ")
+calls_made = int(input("Enter number of calls: "))
+call_minutes = int(input("Enter number of minutes: "))
+
+# process - calculate bill (nested if) approach
+if calls_made &gt; CALLS:
+    if call_minutes &gt; MINUTES:
+        customer_bill = customer_bill + ADD_PREMIUM
+
+
+# output - display customer bill
+print("Total = " + locale.currency(customer_bill, grouping=True))
+
+</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Range demo (upper and lower limits) -->
+  <div class="card mb-4" id="range-demo-hi-lo">
+    <div class="card-header">
+      <button class="btn btn-link w-100 text-start text-decoration-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-range-hi-lo"
+              aria-expanded="false"
+              aria-controls="collapse-range-hi-lo">
+        <strong>Range demo (upper and lower limits)</strong>
+      </button>
+    </div>
+    <div id="collapse-range-hi-lo" class="collapse">
+      <div class="card-body">
+        <div id="range-demo-hi-lo-code" class="px-3 px-md-5">
+          <pre>#!/usr/bin/env python3
+
+# Various coding techniques to calculate a discount based on qty
+# Pardon the magic numbers
+
+# Declare variables and constants
+qty = 0
+discunt = 0.0
+
+
+# input - get qty
+qty = int(input("Enter Qty: "))
+
+
+# process - figure out the discount
+# This approach uses upper and lower limits using the "and" operator
+if qty &gt;= 0 and qty &lt;= 10:
+    discount = 0.00
+elif qty &gt;= 11 and qty &lt;= 24:
+    discount = 0.10
+elif qty &gt;= 25 and qty &lt;= 50:
+    discount = 0.15
+else:
+    discount = 0.20
+
+
+# output - display discount percentage
+print("Discount is: " + "{:.2%}".format(discount))
+
+</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Range demo high end -->
+  <div class="card mb-4" id="range-demo-upper">
+    <div class="card-header">
+      <button class="btn btn-link w-100 text-start text-decoration-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-range-upper"
+              aria-expanded="false"
+              aria-controls="collapse-range-upper">
+        <strong>Range demo high end</strong>
+      </button>
+    </div>
+    <div id="collapse-range-upper" class="collapse">
+      <div class="card-body">
+        <div id="range-demo-upper-code" class="px-3 px-md-5">
+          <pre>#!/usr/bin/env python3
+
+# Various coding techniques to calculate a discount based on qty
+# Pardon the magic numbers
+
+# Declare variables and constants
+qty = 0
+discunt = 0.0
+
+
+# input - get qty
+qty = int(input("Enter Qty: "))
+
+
+# process - figure out the discount
+# This approach starts with the high limit and works its way down
+# First check for a qty &gt; 0
+if qty &gt; 0:
+    if qty &gt; 50:
+        discount = 0.20
+    elif qty &gt; 24:
+        discount = 0.15
+    elif qty &gt; 10:
+        discount = 0.10
+    else:
+        discount = 0
+else:
+    print("Qty must be &gt; 0")
+
+# output - display discount percentage
+print("Discount is: " + "{:.2%}".format(discount))
+
+</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Range demo low end -->
+  <div class="card mb-4" id="range-demo-lo">
+    <div class="card-header">
+      <button class="btn btn-link w-100 text-start text-decoration-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-range-lo"
+              aria-expanded="false"
+              aria-controls="collapse-range-lo">
+        <strong>Range demo low end</strong>
+      </button>
+    </div>
+    <div id="collapse-range-lo" class="collapse">
+      <div class="card-body">
+        <div id="range-demo-lo-code" class="px-3 px-md-5">
+          <pre>#!/usr/bin/env python3
+
+# Various coding techniques to calculate a discount based on qty
+# Pardon the magic numbers
+
+# import locale to do currency formatting
+import locale
+locale.setlocale(locale.LC_ALL, 'en-US')  # use "en_US" on Mac
+
+# Declare variables and constants
+qty = 0
+discunt = 0.0
+
+
+# input - get qty
+qty = int(input("Enter Qty: "))
+
+
+# process - figure out the discount
+# This approach starts with the lower limits and works its way up
+# First check for a qty &gt; 0
+if qty &gt; 0:
+    if qty &lt; 11:
+        discount = 0
+    elif qty &lt; 25:
+        discount = 0.10
+    elif qty &lt; 51:
+        discount = 0.15
+    else:
+        discount = 20.0
+else:
+    print("Qty must be &gt; 0")
+
+# output - display discount percentage
+print("Discount is: " + "{:.2%}".format(discount))
+
+</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
