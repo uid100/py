@@ -1,0 +1,268 @@
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <h2 class="alert">Exercise 1</h2>
+            <h3>A Guided Python Application: Exponents and Factorials</h3>
+            <div id="ex1-intro">
+                <h4>Description</h4>
+                <p>
+                    Loops or repetition structures are used extensively in software development 
+                    so it's very important to get comfortable coding these. The exercise 
+                    we're going to do here isn't necessarily real practical but it 
+                    does illustrate the use of loops for a couple of common arithmetic operations. 
+                    The first one we'll do is an exponent function. Most modern programming 
+                    languages have either an exponent operator (I.e., Visual Basic, Python) or a 
+                    built-in library function (Java, C#) to calculate exponents so, once again, 
+                    we're doing this just to get some hands-on practice coding loops. The other 
+                    arithmetic operation we'll do is the factorial function.
+                </p>
+                <h4>Design</h4>
+                <p>
+                    This time around, we'll do a flowchart. A flowchart is a graphical means of 
+                    representing an algorithm or process, making it easier to understand and 
+                    communicate.
+                </p>
+                <p class="boxed-paragraph">
+                    This flowchart is a simplified version of the <strong>Activity Diagram.</strong> 
+                    Flowcharts are still widely used in industry as design documents to communicate 
+                    program structure.
+                </p>
+                <p style="font-style: italic;">
+                    Read the instructions carefully. You will practice with two different functions 
+                    in this first Exercise (1).
+                </p>
+            </div> <!-- #ex1-intro -->
+            </div> <!-- .card-body -->
+        </div> <!-- .card -->
+        <div class="card">
+            <div class="card-header">Flowcharts</div>
+            <div class="card-body">
+                <div id="flowchart">
+                <h3>Creating Flowcharts</h3>
+                <p>First, review the basic flowchart shapes.</p>
+                <p>
+                    <img 
+                    src="https://palomar.instructure.com/courses/55278/files/10289518/preview" 
+                    alt="review flowchart shapes" /></p>
+                <p>fig.1 Flowchart Shapes</p>
+                <p>
+                    For doing exponents, we know from past math classes the expression 2<sup>4</sup>
+                    is really a shorthand notation for the expression 2*2*2*2. This looks like something 
+                    we could do with a loop, right? Let's give it a shot.
+                </p>
+                <p>
+                    We'll use the online tool <a href="http://draw.io">Draw.io</a>. It is a drawing 
+                    tool similar to Microsoft Visio.
+                </p>
+                <p>Start out by creating a new diagram.</p>
+                <p><img src="https://uid100.gitub.io/py/images/new-diagram.png" 
+                    alt="new diagram dialog in Draw.io" /></p>
+                <p>fig.2 New Diagram</p>
+                <p>Select (1) Blank Diagram and then (2) Create.</p>
+                <p><img src="https://uid100.gitub.io/py/images/create_blank.png" 
+                    alt="select create blank diagram dialog" /></p>
+                <p>fig.3 Create from Blank</p>
+                <p>You can also select Flowcharts and then Create.</p>
+                <p><img src="https://uid100.gitub.io/py/images/create_flowchart.png" 
+                    alt="create from flowchart template" /></p>
+                <p>fig.4 or Create from Flowcharts</p>
+                <p class="boxed-paragraph">
+                    Which shapes you choose matter. Hover over each shape in the palette to find its 
+                    correct purpose.
+                </p>
+                <p>
+                    You will get a blank drawing with various tool palettes of shapes on the left side. 
+                    Expand Flowchart. The “key” shapes we'll be using are highlighted below. Select a 
+                    shape, hold down the left mouse button, and then drag and then drop the shape onto 
+                    the page. Double-click the shape to add text. A “proper” flowchart will have a 
+                    distinct start and end; all shapes will have appropriate labels, and all structures 
+                    will have a single entry and exit point.
+                </p>
+                <p><img src="https://uid100.gitub.io/py/images/flow_shapes.png" 
+                    alt="common flowchart shapes" /></p>
+                <p>fig.5 Common flowchart shapes for this exercise</p>
+                <p>
+                    First, drag and drop a Start/End oval (or “lozenge” as the textbook likes to call it) 
+                    onto the page. Double-click the oval and label it as either “Start” or “Begin”. Drag 
+                    and drop a Data (Input/Output) parallelogram onto the page. If you hover over the 
+                    parallelogram in the Flowchart shapes palette, you will see it is used to indicate 
+                    "Data".
+                </p>
+                <p>
+                    To save time and space, we'll combine our inputs into one shape. Double-click the 
+                    parallelogram and enter the required inputs. In this case, we need the number and the 
+                    power or exponent. Your flowchart should look something like this:
+                </p>
+                <p>
+                    <img 
+                        src="https://uid100.gitub.io/py/images/get-inputs.png" 
+                        alt="get inputs" /></p>
+                <p>fig.6 Get inputs</p>
+                <p>
+                    Click on the Start oval and drag the flow line/arrow to the parallelogram. You can 
+                    also use the Connector tool in the tool bar to draw flow lines. Be aware getting 
+                    flowlines drawn correctly can be a bit of a trial and error process. The flowchart 
+                    should now look something like this:
+                </p>
+                <p>
+                    <img 
+                        src="https://uid100.gitub.io/py/images/adding-flow-lines.png" 
+                        alt="adding flow-lines" /></p>
+                <p>
+                    <img 
+                        src="https://uid100.gitub.io/py/images/added-flow-lines.png" 
+                        alt="added flow-lines" /></p>
+                <p>fig.7&amp;8 Add flow-lines</p>
+                <p>Note how the arrow on the connector always points to the next step.</p>
+                <p>
+                    Next, drag and drop a process box (rectangle) onto the page, double-click and 
+                    initialize the loop counter with the statement i = 0. Also, we need a variable f
+                    or the result that will be initialized to 1 so add the statement result = 1. 
+                    When coding loops, it's generally accepted and understood the single letter 
+                    variables i, j and k are loop counters. If you prefer to use a variable name 
+                    such as count, that's fine too. Draw a line from the input to the process box.
+                </p>
+                <p>
+                    Next, add a decision diamond to test the loop condition. Since we initialized 
+                    i = 0, we need to ask the question is i &lt; exponent. Draw a flow line into 
+                    the top of the decision diamond. The flowchart will now look like this:
+                </p>
+                <p>
+                    <img 
+                        src="https://uid100.gitub.io/py/images/decision.png" 
+                        alt="adding the decision block" />
+                </p>
+                <p>fig.9 Start &gt; Input &gt; Initialize &gt; Conditional</p>
+                <p>
+                    In a decision diamond, there will always be 2 flow lines coming out; one for 
+                    the true path and 1 for the false path. For a loop, when the loop condition 
+                    is false, the loop will terminate. We’ll arbitrarily start with the true path 
+                    so we need to add a process box to set result = result * number and, very 
+                    important, increment the loop counter by 1. Again, to save time and space, 
+                    we'll put both in the same box. Draw a flow line from the right side of the 
+                    decision diamond to the process box. Double-click the flow line and label true. 
+                    It's also generally accepted to use Yes/No, T/F or Y/N Instead of True/False. 
+                    Add a flow line from the process box to the top of the decision diamond. Our 
+                    flowchart should now look something like this:
+                </p>
+                <p>
+                    <img 
+                        src="https://uid100.gitub.io/py/images/loop.png"
+                         alt="flowchart showing loop structure" /></p>
+                <p>fig.10 Loop structure</p>
+                <p>
+                    When the loop condition is false, the loop will terminate and the next step will
+                    be to add another data (input/output) parallelogram to display the result. Add 
+                    a flowline labeled false from the bottom of the decision diamond to our output 
+                    step. Last, add a terminator and a flowline from the output. Our finished 
+                    flowchart will look like this:</p>
+                <p>
+                    <img 
+                        src="https://uid100.gitub.io/py/images/exponent.png" 
+                        alt="example flowchart for exponent" />
+                </p>
+                <p>fig.11 Exponent - Flowchart</p>
+                <p>&nbsp;</p>
+                <ul>Things to notice about a <em>properly drawn</em> flowchart:
+                    <li>Distinct start/end points.</li>
+                    <li>Flowlines run from top to bottom, left to right with the exception 
+                        of flow lines going to the top of a loop.</li>
+                    <li>Flowlines in a decision are clearly labeled with the true and false 
+                        path.</li>
+                    <li>Arrows on flow lines point to the next step in the process.</li>
+                    <li>Each program structure has exactly one entry and one exit point; no 
+                        steps lead to a dead end.</li>
+                </ul>
+                <p>&nbsp;</p>
+                <p>
+                    Last thing: Be sure to save your work! If you plan to edit or do work on your 
+                    flowchart later on, be sure to click on File and then <em>Save as</em></p>
+                <p>
+                    <img 
+                        src="https://uid100.gitub.io/py/images/save-as.png" 
+                        alt="save as dialog" /> 
+                    <img 
+                        src="https://uid100.gitub.io/py/images/save-drawio.png" 
+                        alt="save draw.io (XML) file" />
+                </p>
+                <p>fig.12 Save As</p>
+                <p>
+                    Enter a suitable file name. If you want to save to your computer, select 
+                    <em>Device</em>. You may also save to one of the online cloud based accounts 
+                    shown below assuming you have a user account. By default, Draw.io saves to 
+                    the Windows user downloads directory. Be sure to copy or move the file to 
+                    your lab folder.
+                </p>
+                <p class="boxed-paragraph">
+                    <strong>Do not submit this Draw.io (XML) file!</strong> Keep reading.
+                </p>
+                <p>
+                    For turning in a lab, export to JPEG image format. Be sure the file is in your
+                    lab folder.</p>
+                <p>
+                    From the menu, choose: <strong>File &gt; Export as &gt; JPEG...</strong>
+                </p>
+                <p>
+                    <img 
+                        src="https://uid100.gitub.io/py/images/flow-exponent.png" 
+                        alt="export as JPEG image format" /></p>
+                <p>fig.13 Export as JPEG</p>
+                <p>For comparison purposes, we could write pseudocode something like this:</p>
+                <pre>Get number
+Get exponent
+i = 0
+result = 1
+
+while i &lt; exponent
+    result = result * number
+    i = i + 1
+end while
+
+Display result
+</pre>
+                <p>&nbsp;</p>
+                </div> <!-- #flowchart -->
+            </div> <!-- .card-body -->
+            <div class="card-body">
+                <h3>Factorial</h3>
+                <p class="boxed-paragraph">
+                    For the factorial exercise, recall from an earlier math class that the expression 
+                    <code>5!</code> is simply a short hand notation for <code>1*2*3*4*5</code>.
+                </p>
+                <p>
+                    Once again, does this look like something we could code using a loop?
+                </p>
+                <p>
+                    Refer to the previous exercise if you need details on how to create a flowchart, 
+                    add shapes, draw flow lines, etc. The factorial flowchart should look something 
+                    like this:
+                </p>
+                <p>
+                    <img 
+                        src="https://uid100.gitub.io/py/images/flow-factorial.png" 
+                        alt="example flowchart for factorial" /></p>
+                <p>fig.14 Flowchart example: Factorial</p>
+                <p>
+                    For both exercises, notice how we initialized our result variable to 1 because 
+                    multiplying by 0 will give a result of 0. Be aware! Little things like this are 
+                    very common logical errors in programming!
+                </p>
+                <p>Be sure to export both as jpg to your lab folder.</p>
+            </div>
+            <div id="ex1-code">
+                <h2 class="alert">Code</h2>
+                <h3>Python Implementation</h3>
+                <p>Create a file called <code>exponent.py</code>. For those of you using lab computers, be sure to save to your USB drive or H: drive and be sure to save to your lab03 folder. This is worth points!</p>
+                <p>The next step is to convert our design into real working Python code.</p>
+                <p><img src="https://uid100.gitub.io/py/images/exponent.py.png" alt="exponent.py code" /></p>
+                <p>fig.15 exponent.py code</p>
+                <p>Next, we&rsquo;ll do the factorial code. Create a new Python code file called <code>factorial.py</code>. Enter the code below:</p>
+                <p><img src="https://uid100.gitub.io/py/images/factorial.py.png" alt="factorial.py code" /></p>
+                <p>fig.16 factorial.py</p>
+                <p>Note the test values above to ensure each is working correctly.</p>
+            </div>
+            <p style="font-style: italic; text-align: center;">Go to Exercise 2!</p>
+        </div>
+
+    </div>
+</div>
