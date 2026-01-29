@@ -1,210 +1,208 @@
 <div class="card">
     <div class="card-header">Exercise 1: User-defined Methods</div>
     <div class="card-body">
-        <div id="ex1" style="padding: 20px; background-color: lightskyblue;">
-            <h2 class="alert">Exercise 1</h2>
-            <h3>User-defined methods</h3>
-            <p>
-                This first exercise will give you a guided walk through of creating a simple library 
-                of user-defined methods. You may need to (re)use any/all of these methods in this 
-                library in future lab exercises so completing it and having everything working correctly 
-                now will give you an advantage later on.
-            </p>
-            <p>&nbsp;</p>
-            <ol>
-                <li>Create a Python file called <code>Methods.py</code>. This is case-sensitive.</li>
-                <li>
-                    <p>
-                        Create a user defined method called <code>get_float(prompt)</code> that accepts 
-                        a prompt as a parameter, uses that prompt to prompt the user for an input, and 
-                        stays in a loop until a float value is entered. You are given the code for this 
-                        one. You are also given a &ldquo;sneak peak&rdquo; to using exception handling 
-                        to validate input and recover from runtime errors.
+        <h2 class="alert">Exercise 1</h2>
+        <h3>User-defined methods</h3>
+        <p>
+            This first exercise will give you a guided walk through of creating a simple library 
+            of user-defined methods. You may need to (re)use any/all of these methods in this 
+            library in future lab exercises so completing it and having everything working correctly 
+            now will give you an advantage later on.
+        </p>
+        <p>&nbsp;</p>
+        <ol>
+            <li>Create a Python file called <code>Methods.py</code>. This is case-sensitive.</li>
+            <li>
+                <p>
+                    Create a user defined method called <code>get_float(prompt)</code> that accepts 
+                    a prompt as a parameter, uses that prompt to prompt the user for an input, and 
+                    stays in a loop until a float value is entered. You are given the code for this 
+                    one. You are also given a &ldquo;sneak peak&rdquo; to using exception handling 
+                    to validate input and recover from runtime errors.
+                </p>
+                <p style="font-style: italic;">
+                    Watch indentation closely. It gets tricky with both a while loop and try/except 
+                    blocks.
+                </p>
+                <p>
+                    <img 
+                        src="https://uid100.github.io/py/images/get_float_val.png" 
+                        alt="Methods.py source code and the get_float_val() method" 
+                        width="621" height="493" />
+                </p>
+            </li>
+            <li>
+                <p>Create a Python file called <code>MethodTest.py</code></p>
+            </li>
+            <li>
+                <p>
+                    Import your <code>Methods</code> file. Note how you can create a shortened 
+                    <em>alias</em> name for your import file. In this case, we'll call it 
+                    <code>m</code>. You will also create a <code>main()</code> method for testing 
+                    the methods you create and code to invoke the <code>main()</code> method.
+                </p>
+                <p>You are given the code for this:</p>
+                <p>
+                    <img 
+                        src="https://uid100.github.io/py/images/MethodTest.png" 
+                        alt="MethodTest.py Python source code" width="621" height="395" />
                     </p>
-                    <p style="font-style: italic;">
-                        Watch indentation closely. It gets tricky with both a while loop and try/except 
-                        blocks.
+            </li>
+            <li>
+                <p>
+                    Test your <code>get_float_val()</code> method. Test with both invalid and 
+                    valid values. Be sure to save <strong><em>both</em></strong> files before 
+                    testing!
+                </p>
+                <p>
+                    <img 
+                        src="https://uid100.github.io/py/images/get_float_val_results.png" 
+                        alt="sample results for get_float_val() test" />
+                </p>
+            </li>
+            <li>
+                <p>
+                    In your Methods file, create a user defined method called <code>get_int_val(prompt)</code> 
+                    that takes a prompt as a parameter, uses that prompt to prompt the user for an input, and 
+                    stays in a loop until an integer value is entered. You get to code this one. Hint: The code 
+                    will be very similar to the <code>get_float_val()</code> method.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Add code to the <code>main()</code> method to test your <code>get_int_val()</code> method. 
+                    The code will be very similar to what you did to test the <code>get_float_val()</code> method.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Test your <code>get_int_val()</code> method. Be sure to test with both invalid and valid values.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Create a user defined method called <code>is_float(value)</code> that simply tests if an 
+                    input value is a float. This method will accept a string input value as a parameter and 
+                    return a True/False (Boolean) result.
+                </p>
+                <p>
+                    You are given the code for this one. It also uses exception handling to determine if the 
+                    value is a float.
+                </p>
+                <p>
+                    <img 
+                        src="https://uid100.github.io/py/images/is_float.png" 
+                        alt="is_float source" width="621" height="158" />
                     </p>
-                    <p>
-                        <img 
-                            src="https://uid100.github.io/py/images/get_float_val.png" 
-                            alt="Methods.py source code and the get_float_val() method" 
-                            width="621" height="493" />
+            </li>
+            <li>
+                <p>
+                    Add code to the <code>main()</code> method to test your <code>is_float()</code> method. 
+                    You are given the code:
+                </p>
+                <p>
+                    <img 
+                        src="https://uid100.github.io/py/images/test_is_float.png" 
+                        alt="test is_float()" width="621" height="237" /></p>
+            </li>
+            <li>
+                <p>
+                    Be sure to save your work and then test the <code>is_float()</code> method with both 
+                    valid and invalid inputs.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Create a user defined method called <code>is_integer(value)</code> that tests if an 
+                    input value is an integer. This method will accept a string input value as a parameter 
+                    and return a True/False (Boolean) result. You get to code this one but the code will 
+                    be very similar to <code>is_float()</code>
+                </p>
+            </li>
+            <li>
+                <p>
+                    Add code to the <code>main()</code> method to test your <code>is_integer()</code> 
+                    method. You get to code this.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Be sure to save and test your is_integer method. Test with both invalid and valid 
+                    test data.
+                </p>
+            </li>
+            <li>
+                <p>
+                    In lab 5, you wrote code to search an array for a value. This is actually a quite 
+                    common programming task. Do you want to code this over and over every time you need 
+                    to search an array?
+                </p>
+                <p>
+                    Let's code a search method we can reuse! In your Methods file, create a user defined 
+                    method called <code>find_string()</code> to find a string value in a Python list. 
+                    This method will accept 2 parameters. The first will be a string list to search and 
+                    the second parameter will be the value to find. It will return the subscript where 
+                    the value was found or <code>-1</code> if the value was not found. You are given the 
+                    code for this one.
+                </p>
+                <p>
+                    <img 
+                        src="https://uid100.github.io/py/images/find_string.png" 
+                        alt="find_string source" width="621" height="219" />
                     </p>
-                </li>
-                <li>
-                    <p>Create a Python file called <code>MethodTest.py</code></p>
-                </li>
-                <li>
-                    <p>
-                        Import your <code>Methods</code> file. Note how you can create a shortened 
-                        <em>alias</em> name for your import file. In this case, we'll call it 
-                        <code>m</code>. You will also create a <code>main()</code> method for testing 
-                        the methods you create and code to invoke the <code>main()</code> method.
-                    </p>
-                    <p>You are given the code for this:</p>
-                    <p>
-                        <img 
-                            src="https://uid100.github.io/py/images/MethodTest.png" 
-                            alt="MethodTest.py Python source code" width="621" height="395" />
-                        </p>
-                </li>
-                <li>
-                    <p>
-                        Test your <code>get_float_val()</code> method. Test with both invalid and 
-                        valid values. Be sure to save <strong><em>both</em></strong> files before 
-                        testing!
-                    </p>
-                    <p>
-                        <img 
-                            src="https://uid100.github.io/py/images/get_float_val_results.png" 
-                            alt="sample results for get_float_val() test" />
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        In your Methods file, create a user defined method called <code>get_int_val(prompt)</code> 
-                        that takes a prompt as a parameter, uses that prompt to prompt the user for an input, and 
-                        stays in a loop until an integer value is entered. You get to code this one. Hint: The code 
-                        will be very similar to the <code>get_float_val()</code> method.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Add code to the <code>main()</code> method to test your <code>get_int_val()</code> method. 
-                        The code will be very similar to what you did to test the <code>get_float_val()</code> method.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Test your <code>get_int_val()</code> method. Be sure to test with both invalid and valid values.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Create a user defined method called <code>is_float(value)</code> that simply tests if an 
-                        input value is a float. This method will accept a string input value as a parameter and 
-                        return a True/False (Boolean) result.
-                    </p>
-                    <p>
-                        You are given the code for this one. It also uses exception handling to determine if the 
-                        value is a float.
-                    </p>
-                    <p>
-                        <img 
-                            src="https://uid100.github.io/py/images/is_float.png" 
-                            alt="is_float source" width="621" height="158" />
-                        </p>
-                </li>
-                <li>
-                    <p>
-                        Add code to the <code>main()</code> method to test your <code>is_float()</code> method. 
-                        You are given the code:
-                    </p>
-                    <p>
-                        <img 
-                            src="https://uid100.github.io/py/images/test_is_float.png" 
-                            alt="test is_float()" width="621" height="237" /></p>
-                </li>
-                <li>
-                    <p>
-                        Be sure to save your work and then test the <code>is_float()</code> method with both 
-                        valid and invalid inputs.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Create a user defined method called <code>is_integer(value)</code> that tests if an 
-                        input value is an integer. This method will accept a string input value as a parameter 
-                        and return a True/False (Boolean) result. You get to code this one but the code will 
-                        be very similar to <code>is_float()</code>
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Add code to the <code>main()</code> method to test your <code>is_integer()</code> 
-                        method. You get to code this.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Be sure to save and test your is_integer method. Test with both invalid and valid 
-                        test data.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        In lab 5, you wrote code to search an array for a value. This is actually a quite 
-                        common programming task. Do you want to code this over and over every time you need 
-                        to search an array?
-                    </p>
-                    <p>
-                        Let's code a search method we can reuse! In your Methods file, create a user defined 
-                        method called <code>find_string()</code> to find a string value in a Python list. 
-                        This method will accept 2 parameters. The first will be a string list to search and 
-                        the second parameter will be the value to find. It will return the subscript where 
-                        the value was found or <code>-1</code> if the value was not found. You are given the 
-                        code for this one.
-                    </p>
-                    <p>
-                        <img 
-                            src="https://uid100.github.io/py/images/find_string.png" 
-                            alt="find_string source" width="621" height="219" />
-                        </p>
-                </li>
-                <li>
-                    <p>
-                        In the <code>main()</code> method, add some code to test your <code>find_string()</code> 
-                        method. You are give the code.
-                    </p>
-                    <p>
-                        <img 
-                            src="https://uid100.github.io/py/images/test_find_string.png" 
-                            alt="test find_string source" width="621" height="629" />
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        It's time to test. Test with both valid and invalid input values to make sure the 
-                        method returns the correct index or -1 if not found. Since we are comparing the 
-                        string values in <code>find_string()</code> using upper case, the letter case 
-                        doesn't matter on the input.
-                    </p>
-                    <p>It does matter that the word is spelled correctly!</p>
-                </li>
-                <li>
-                    <p>
-                        In your Methods file, create a user defined method called <code>find_int()</code> 
-                        to find an integer value in a Python list. This method will accept 2 parameters. 
-                        The first will be an integer list to search and the second parameter will be the 
-                        value to find. It will return the subscript where the value was found or -1 if 
-                        the value was not found. You get to code this one. Hint: The code you need is quite
-                        similar to the code you used above.
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        In the <code>main()</code> method, add some code to test your <code>find_int()</code> 
-                        method.
-                    </p>
-                    <p>
-                        It is essential that your test code is passing a list of integers in the parameter list,
-                        not a list of strings.
-                    </p>
-                    <p>
-                        You get to code this, although the code will be very similar to the code above. Pay
-                        attention to data types!
-                    </p>
-                    <p>
-                        Use a hard-coded integer list (at least 6 values) and prompt the user for the value to 
-                        find. Display the subscript of the found value and a <em>"Not found"</em> message if the 
-                        value was not found.
-                    </p>
-                </li>
-                <li>
-                    <p>Test your <code>find_int()</code> with both valid and invalid values.</p>
-                </li>
-            </ol>
-        </div>
+            </li>
+            <li>
+                <p>
+                    In the <code>main()</code> method, add some code to test your <code>find_string()</code> 
+                    method. You are give the code.
+                </p>
+                <p>
+                    <img 
+                        src="https://uid100.github.io/py/images/test_find_string.png" 
+                        alt="test find_string source" width="621" height="629" />
+                </p>
+            </li>
+            <li>
+                <p>
+                    It's time to test. Test with both valid and invalid input values to make sure the 
+                    method returns the correct index or -1 if not found. Since we are comparing the 
+                    string values in <code>find_string()</code> using upper case, the letter case 
+                    doesn't matter on the input.
+                </p>
+                <p>It does matter that the word is spelled correctly!</p>
+            </li>
+            <li>
+                <p>
+                    In your Methods file, create a user defined method called <code>find_int()</code> 
+                    to find an integer value in a Python list. This method will accept 2 parameters. 
+                    The first will be an integer list to search and the second parameter will be the 
+                    value to find. It will return the subscript where the value was found or -1 if 
+                    the value was not found. You get to code this one. Hint: The code you need is quite
+                    similar to the code you used above.
+                </p>
+            </li>
+            <li>
+                <p>
+                    In the <code>main()</code> method, add some code to test your <code>find_int()</code> 
+                    method.
+                </p>
+                <p>
+                    It is essential that your test code is passing a list of integers in the parameter list,
+                    not a list of strings.
+                </p>
+                <p>
+                    You get to code this, although the code will be very similar to the code above. Pay
+                    attention to data types!
+                </p>
+                <p>
+                    Use a hard-coded integer list (at least 6 values) and prompt the user for the value to 
+                    find. Display the subscript of the found value and a <em>"Not found"</em> message if the 
+                    value was not found.
+                </p>
+            </li>
+            <li>
+                <p>Test your <code>find_int()</code> with both valid and invalid values.</p>
+            </li>
+        </ol>
     </div> <!-- card body -->
 </div> <!-- card -->
