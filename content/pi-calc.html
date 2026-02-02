@@ -1,0 +1,47 @@
+<p>
+    <img 
+        src="https://uid100.github.io/images/random_points.PNG" 
+        alt="random points in a circle" width="305" height="292" />
+</p>
+<h2>Pi approximation</h2>
+<p>
+    super-impose a unit circle on a square and create random points (x,y) on the surface 
+    and calculate the distance from the origin. Calculate the ratio of the counts of the 
+    points inside the circle (distance &lt;= 1.0) with those outside which is the difference 
+    of the area of the circle (pi * radius^2 ) and the area of the square ( 2 * radius ^2 )
+</p>
+<p>
+    view an increasing number of random values, use 1/4 of the unit circle to calculate 
+    between 0,0 and 0,1, and 1,0 and 1,1
+</p>
+<p>&nbsp;</p>
+<pre>#!/usr/bin/env python3
+
+import random as r
+import math
+
+# get a random point in our area
+def point():
+    return (r.random(), r.random())
+
+# calculate distance from origin
+def distance(x,y):
+    return math.sqrt(x*x + y*y)
+
+def main():
+    num_points = 10000000
+    inside = 0
+
+    for i in range(num_points):
+        (x,y) = point()
+        if distance(x,y) &lt;= 1:
+            inside += 1
+
+    approximation = 4 * inside / num_points
+    error = (approximation -  math.pi) / math.pi * 100
+    print( f"{approximation = }; {error = }" )
+
+
+if __name__=="__main__":
+    main()
+</pre>
