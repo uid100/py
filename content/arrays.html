@@ -1,0 +1,51 @@
+<div class="card" id="content" style="padding: 20px;">
+        <div class="card-header">Arrays</div>
+        <div class="card-body">
+            <h3>Variable type</h3>
+            <p>An array is a fundamental data structure in programming that allows you to store
+                 a collection of elements of the same type under a single variable name. Arrays 
+                 are commonly used for organizing and manipulating data efficiently.</p>
+            <p>Keep the <strong>variable</strong> discussion in mind. An array is first and 
+                most importantly, a variable type! So it must have a known size and set of 
+                rules, and must address a location in memory.</p>
+            <h4 style="font-style: italic;">How much space do I need?</h4>
+            <p>All elements of an array must be the same type (and size!), and the number of 
+                elements must be known when it is declared. When the compiler identifies the 
+                space required for any variable, it needs to know how much space is required.</p>
+            <h4 style="font-style: italic;">An array is stored in <strong>contiguous</strong> 
+                memory</h4>
+            <p>The application will map any variable to an actual location in memory. Arrays 
+                are no different. The address of an array maps to the start of the block of 
+                memory reserved to store its data. Since each element is the same size (type), 
+                if the first element is stored at the start of the block, finding the second 
+                one is simply a matter of moving through the memory, past exactly the size of 
+                the first element. Getting to the third means starting from the beginning and 
+                going past the first two (2) elements. In code, we call this the index of the 
+                array element. So, <code>myArray[5]</code> is referring to an element located 
+                past the first 5 items counted from the beginning of the memory block, or the 
+                sixth element.</p>
+            <h3>Declaring Arrays</h3>
+            <p><em>In most programming languages,</em> arrays are declared by specifying the 
+                data type of the elements they will contain, followed by the array name and 
+                the size of the array (number of elements).</p>
+            <h3>Assigning Values to Arrays</h3>
+            <p>Once declared, you can assign values to individual elements of the array using 
+                indexing. Indexing starts at 0 for the first element and goes up to the size 
+                of the array minus one.</p>
+            <h3>Storing and Retrieving Elements</h3>
+            <p>Elements in an array are stored sequentially in memory, allowing for fast 
+                access based on their index. You can retrieve elements by specifying their 
+                index within square brackets.</p>
+            <pre><code>
+            // Retrieving elements from the array in Python
+            myArray = [10, 20, 30]
+            print(myArray[0])  # Output: 10
+            print(myArray[2])  # Output: 30
+                </code></pre>
+            <p>Arrays provide a convenient and efficient way to work with collections of data 
+                in programming, making them a valuable tool for various tasks.</p>
+    </div>
+    <div id="footer" style="padding: 20px;">
+        <p style="text-align: center;"><em>Use the [Next &gt;] button to continue.</em></p>
+    </div>
+</div>
