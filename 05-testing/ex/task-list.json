@@ -1,0 +1,6 @@
+[
+  { "title": "Writing Custom Functions", "file": "0-intro.html" },
+  { "title": "Find and Fix: Syntax Errors", "file": "1-syntax-errors.html" },
+  { "title": "Find and Fix: Runtime Errors", "file": "2-runtime-errors.html" },
+  { "title": "Find and Fix: Logic Errors", "file": "3-logic-errors.html" }
+]

@@ -1,0 +1,102 @@
+<div class="card">
+    <div class="card-header">Exercise 1: Syntax errors</div>
+    <div class="card-body" id="ex1" style="padding: 20px;">
+        <h3>Find and fix syntax errors</h3>
+        <div id="ex1-intro">
+            <p>
+                Create a Python file named <code>syntax_errors.py</code> and copy the 
+                following code.</p>
+            <p>&nbsp;</p>
+            <p>
+                Each line that contains an error, add a hash (#) at the beginning of each 
+                line that contains an error to mark it as a comment and add another comment 
+                above it explaining what the error is, and then another line below that 
+                with the corrected code if possible.</p>
+            <p>For example:</p>
+            <pre>        x = 5
+        while x &gt; 0
+            print( x, end=' ' )
+            x -= 1 
+    </pre>
+                <p>would be replaced with:</p>
+                <pre>        x = 5
+        # while clause should be terminated with a color (':')
+        # while x &gt; 0
+        while x &gt; 0:
+            print( x, end=' ' )
+            x -= 1 
+    </pre>
+        </div> <!-- #ex1-intro -->
+    </div> <!-- .card-body -->
+</div> <!-- .card -->
+<p>&nbsp;</p>
+<div class="card" style="padding: 10px;">
+    <div class="card-header">Code with syntax errors</div>
+    <div class="card-body">
+<pre>#!user/bin/env python 3
+
+# Author: Developer 1
+# COMP 122
+# Simple console program to calculate a user's score
+# and display messages based on the result
+
+print("Welcome to the Score Calculator"
+
+# Get user information
+name = input("Enter your name: ")
+age = int(input("Enter your age: "))
+
+# Initialize score
+score = 0
+
+# Ask some questions
+print("Answer the following questions")
+
+q1 = int(input("What is 5 + 3? "))
+if q1 = 8 
+    score = score + 10
+else
+    score = score + 0
+
+q2 = int(input("What is 10 - 4? "))
+if q2 == 6:
+    score += 10
+else:
+    score += 0
+
+q3 = int(input("What is 3 * 3? "))
+if q3 == 9:
+        score = score + 10
+    else:
+        score = score + 0
+
+# Bonus question
+bonus = input("Do you want a bonus question? (yes/no) ")
+if bonus == "yes":
+    q4 = int(input("What is 20 / 4? "))
+    if q4 == 5: 
+        score = score + 5
+    else
+        score = score - 5
+
+# Display results
+print("Calculating results...")
+
+if score >= 30:
+    print("Great job", name)
+elif score >= 20
+    print("Good effort", name)
+else:
+    print("Keep practicing", name
+
+# Show final score 
+print("Final score is: " + score)
+
+# Age-based message
+if age > 18:
+print("You are an adult learner")
+else:
+    print("You are a student")
+</pre>
+    </div> <!-- .card-body -->
+</div> <!-- .card -->
