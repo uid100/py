@@ -1,0 +1,39 @@
+<div class="card">
+    <div class="card-header">Exercise 1: Syntax errors</div>
+    <div class="card-body" id="ex1" style="padding: 20px;">
+        <div id="ex1" style="padding: 20px; background-color: lightskyblue;">
+            <h2 class="alert">Exercise 1</h2>
+            <h3>Guided Zip Code Lookup</h3>
+            <div id="ex1-intro">
+                <h4>Description</h4>
+                <p>In this first case study, we'll use parallel arrays; search for a value in the first, and display related data in parallel arrays.</p>
+                <p>Prompt the user to enter a zip code, and search through the stored data. If the zip code is found, the program displays the city and state. This is something we&rsquo;ve seen and done while ordering items on a web site or filling out an online form.</p>
+                <p>We&rsquo;re going to focus mainly on things that are new so there won&rsquo;t be a whole lot of detail on creating a program file in Python, etc. In this case, we&rsquo;ll focus on creating arrays, coding an efficient search loop, and accessing the elements of an array.</p>
+            </div>
+            <p>Analysis: The user enters a zip code. Search the array using a loop. If the zip code is found, return the corresponding city and state from the parallel arrays.</p>
+            <p>If we search an array and find a match at subscript n, we can get the corresponding values from the parallel arrays at subscript n as well. We can do either pseudocode or a flowchart.</p>
+            <p>Sample flowchart:</p>
+            <p style="text-align: center;"><img src="https://sdccd.instructure.com/courses/2497070/files/155136955/preview" alt="zip code search flowchart" data-api-endpoint="https://sdccd.instructure.com/api/v1/courses/2497070/files/155136955" data-api-returntype="File" /> fig.1 - Zip Code search - Flowchart</p>
+            <p>Note in the loop condition, we have 2 conditions: one to stay in the bounds of the array and the other is a search flag called found. Note the <i>found</i> flag is initially set <strong>false</strong> and gets set to <strong>true</strong> if we get a match. This makes our search more efficient. Why continue searching for something if we already found it? To avoid a selection structure after the loop, we can initialize our city and state variables to something like &ldquo;NOT FOUND&rdquo; when we declare them.</p>
+            <p>In our example, we have a small number of zip codes and a corresponding (and equal) number of cities and states, but this code could be expanded to much larger lists (arrays).</p>
+            <div id="ex1-code">
+                <h2 class="alert">Code</h2>
+                <h3>Python Implementation</h3>
+                <p>In Python, create a new file called <strong>ZipSearch.py</strong>. Be sure to save in your Lab05 folder.</p>
+                <p style="text-align: center;"><img src="https://sdccd.instructure.com/courses/2497070/files/155136957/preview" alt="zip code search sample code" data-api-endpoint="https://sdccd.instructure.com/api/v1/courses/2497070/files/155136957" data-api-returntype="File" /> fig.2 Zip code array search code</p>
+                <p>Be sure to test with both valid and invalid zip codes.</p>
+                <p style="text-align: center;"><img src="https://sdccd.instructure.com/courses/2497070/files/155136836/preview" alt="Zip code search test - part 2" data-api-endpoint="https://sdccd.instructure.com/api/v1/courses/2497070/files/155136836" data-api-returntype="File" /> fig.3 test for invalid user entry</p>
+                <p>Notes on the code above:</p>
+                <ul>
+                    <li>Initializing city to &ldquo;NOT FOUND&rdquo; and state to a blank string eliminates need for a selection structure after the loop.</li>
+                    <li>Note the compound condition in the while loop and use of the Python not operator.</li>
+                    <li>Watch your indentation closely with Python loops and selection structures</li>
+                    <li>Be sure to code the colon (:) after loop and selection structure conditions.</li>
+                </ul>
+                <p>&nbsp;</p>
+            </div>
+            <p style="font-style: italic; text-align: center;">Go to Exercise 2!</p>
+        </div>
+
+    </div> <!-- .card-body -->
+</div> <!-- .card -->
