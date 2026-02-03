@@ -1,6 +1,7 @@
 [
   { "title": "Writing Custom Functions", "file": "0-intro.html" },
-  { "title": "Find and Fix: Syntax Errors", "file": "1-syntax-errors.html" },
-  { "title": "Find and Fix: Runtime Errors", "file": "2-runtime-errors.html" },
-  { "title": "Find and Fix: Logic Errors", "file": "3-logic-errors.html" }
+  { "title": "1: Guided Exercise: Zip Code Lookup", "file": "1-zipcodes.html" },
+  { "title": "2: Guided Exercise: Dice Game", "file": "2-dice-game.html" },
+  { "title": "3: Shipping Charge Calculator", "file": "3-shipping.html" },
+  { "title": "4: Dice Game - revisited", "file": "4-dice-game-revisited.html" }
 ]
