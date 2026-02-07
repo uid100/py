@@ -1,0 +1,7 @@
+[
+  { "title": "File I/O and Exception Handling", "file": "0-intro.html" },
+  { "title": "1: Guided Exercise: Count and Parse Strings", "file": "1-lyrics.html" },
+  { "title": "2: Vote Counter", "file": "2-votes.html" },
+  { "title": "3: Test Scores", "file": "3-scores.html" },
+  { "title": "4: MLB Statistics", "file": "4-mlb.html" }
+]

@@ -1,0 +1,37 @@
+<div class="card">
+    <div class="card-header">Exercise 2: Votes!</div>
+    <div class="card-body" id="ex2" style="padding: 20px;">
+        <div id="ex2" style="padding: 20px; background-color: lightskyblue;">
+            <h2 class="alert">Exercise 2</h2>
+            <h3>Votes!</h3>
+            <div id="ex2-intro">
+                <h4>Description</h4>
+                <p>For this exercise, the class has voted for a new <em>Official Chief Handshake Dissemination Officer</em> (classroom greeter) and the results are in a text file.</p>
+                <p>Your objective: write a program ("<code>vote_counter.py</code>") to count the results.</p>
+                <ol>
+                    <li>read the voting results from a text file,</li>
+                    <li>assemble the list of each of the names from the voting file (this will be a short list),</li>
+                    <li>count how many votes each person received</li>
+                    <li>and print the total vote count for each of the named candidates</li>
+                    <li>optional: calculate who received the most votes and announce the winner</li>
+                </ol>
+                <p>&nbsp;</p>
+                <p>To keep it interesting, instead of downloading the voting results, use this code to build the voting list. The output of this file will be the input for your program.</p>
+                <p>Note. This code is meant to generate test data. It includes values hard-coded for testing (names, random-seed). These may change for additional testing.</p>
+                <p>Name this file <code>votes.py</code></p>
+                <img style="margin-left: auto; margin-right: auto; padding-bottom: 0.5em;" src="https://palomar.instructure.com/courses/55278/files/10289555/preview" alt="votes.py code" data-api-endpoint="https://palomar.instructure.com/api/v1/courses/55278/files/10289555" data-api-returntype="File" />
+                <p>Hint: you can use this code to read the file:</p>
+                <pre>    with open("votes.txt", "r") as f:
+        votes = f.read().splitlines()
+                    </pre>
+                <p>&nbsp;</p>
+                <p>Do not hard-code values in your solution. There may be any number of names and votes (lines) in the data file. The example data input is just one possibility. Use <code>find_string()</code> from your <strong>Methods</strong> module as you did in Ex.1 to build a list of distinct names and counts.</p>
+                <p>Don't forget to include your name in the header comment block</p>
+            </div>
+            <h4>Reminder</h4>
+            <p>Include both <code>votes.py</code> and <code>vote_counter.py</code> in your (zipped) lab folder.</p>
+            <p style="font-style: italic; text-align: center;"><a style="color: navy;" href="#tabs">Go to Exercise 3!</a></p>
+        </div>
+
+    </div> <!-- .card-body -->
+</div> <!-- .card -->
