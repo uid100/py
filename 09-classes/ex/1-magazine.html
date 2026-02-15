@@ -1,0 +1,117 @@
+<div class="card">
+    <div class="card-header">Ex. 1: Class Magazine</div>
+    <div class="card-body" id="ex1" style="padding: 20px;">
+        <div id="ex4">
+            <h2>Magazine Subscription Class</h2>
+            <p>
+                This first exercise will be for a magazine subscription class. To keep things 
+                quick and simple, there are just a few properties given in the exercise. In a 
+                real world application, there would probably be quite a few more. When designing 
+                user-defined classes, UML class models are used to define the class. We'll create 
+                these using Draw.io. We'll cover the Unified Modeling Language (UML) in more 
+                detail later.
+            </p>
+            <p>
+                Class models are a common software design tool used by software developers to 
+                design and document amd <strong>communicate</strong>the structure of a class. 
+                They are not flowcharts. They are not meant to show the flow of logic in an 
+                application. They are meant to show the structure of a class. They are meant to 
+                be a "cheat sheet" for coding the class in a programming language. They are an 
+                important communication tool between software developers and other stakeholders 
+                in the software development process.
+            </p>
+            <div id="class-model">
+                <h3>Creating the Class Model</h3>
+                <div class="ic-flash-alert">
+                    <p>
+                        The Class model is a software component design diagram that is <em>one of</em> 
+                        the diagrams in the Unified Modeling Language (UML) standard.</p>
+                    <p>The Class model is not a flowchart.</p>
+                </div>
+                <p class="boxed-paragraph">
+                    <strong>Draw.io</strong> is an online diagramming tool. As a cloud-based tool,
+                    you can access it from any device with an internet connection. Since it is an
+                    external tool, some details of the interface may change over time. If you have
+                    trouble finding something, ask in our course discussion forum.
+                </p>
+                <p>
+                    Navigate a web browser to draw.io, select Blank Diagram and click the Create button. 
+                    You can save to a file later.
+                </p>
+                <p>Scroll down to UML and click the arrow to expand the palette.</p>
+                <p>Locate Class in the tool palette, drag and drop a class template onto the page.</p>
+                <p>
+                    Notice that a class model is split into 3 compartments (Format matters!). The top 
+                    compartment is the class name, the middle compartment contains the attributes or 
+                    properties, and the bottom contains the methods or operations. Click inside each 
+                    compartment and edit as needed. We&rsquo;ll shorten the class name to Magazine to 
+                    save some typing.
+                </p>
+                <p>
+                    For attributes and methods, a minus (-) prefix means that member is private and a 
+                    plus (+) indicates public. Attributes are normally declared private and methods are 
+                    normally public unless they are used only in the internal workings of the class.</p>
+                <p>
+                    Optionally, you can specify the data type as shown in the sample Magazine class 
+                    below.</p>
+                <p>
+                    We'll create a method called toString() that will return a formatted string of the 
+                    subscriber name, magazine title and months remaining.</p>
+                <p>
+                    The book also shows the getters and setters in the methods compartment. Some software 
+                    developers omit these in a class model because it's a given they exist and, if there's 
+                    a large number, they can make a class model very large and unwieldy in a hurry. If 
+                    you want to add the getter and setter methods in, that's perfectly fine.
+                </p>
+                <p>
+                    You can click on each individual compartment and make larger or smaller as needed.</p>
+                <p>
+                    Your completed Magazine class should look (roughly) something like this:</p>
+                <p>
+                    <img src="https://uid100.github.io/py/images/MagazineClassModel.png" 
+                    alt="magazine class model" /></p>
+                <p>
+                    Be sure to save your work. Export the <em>MagazineClassModel</em> as a <strong>jpg</strong>
+                    and save it in your Lab folder.</p>
+            </div>
+            <div id="class-code">
+                <hr />
+                <h3>Python Code for the Magazine Exercise</h3>
+                <p>
+                    Create a new <code>Magazine.py</code> file.
+                </p>
+                <p>
+                    When coding your class in Python, use your class model as a <em>cheat sheet</em>. 
+                    This is why we did all the work of creating it! Keep in mind some of the Python 
+                    demo code in the lecture notes. Is there something there you could <em>borrow</em> 
+                    from? You are given the code for this exercise.</p>
+                <p>
+                    Note that many programming languages use the <code>this</code> reference, although 
+                    the term <code>self</code> is used in Python to refer to the current, active instance 
+                    of the class.</p>
+                <p>
+                    <img src="https://uid100.github.io/py/images/Magazine_py.png" 
+                        alt="Magazine.py source code" /></p>
+                <hr />
+                <h3>Code a <em>Test Fixture</em> for the <strong>Magazine</strong> class</h3>
+                <p>
+                    The next step is to code a test fixture where we can create an instance, set the 
+                    various properties and make sure things work as expected.</p>
+                <p>
+                    You are given the code for <code>MagazineTest.py</code>.</p>
+                <p>
+                    Be sure that your <code>Magazine.py</code> file is in the same folder. And watch your 
+                    capitalization. "Magazine" is not the same as "magazine."</p>
+                <p>
+                    <img src="https://uid100.github.io/py/images/MagazineTest.png" 
+                        alt="MagazineTest source code" /></p>
+                <hr />
+                <h3>Don't Forget to Test!</h3>
+                <p>
+                    <img src="https://uid100.github.io/py/images/MagazineTestRun.png" 
+                    alt="Magazine test run" /></p>
+            </div> <!-- .class-code -->
+            <p style="font-style: italic; text-align: center;">Go to Exercise 2!</p>
+        </div> <!-- #ex1 -->
+    </div> <!-- .card-body -->
+</div> <!-- .card -->
