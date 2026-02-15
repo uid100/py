@@ -1,0 +1,56 @@
+<div class="card">
+    <div class="card-header">Exercise 5: Person</div>
+    <div class="card-body" id="ex5" style="padding: 20px;">
+        <h2>Exercise 5</h2>
+        <hr />
+        <h3 class="alert alert-info">Person class</h3>
+        <p>
+            For this exercise, create a base class (superclass) and two inherited classes 
+            (subclasses). To keep things reasonably simple, we are going to implement just 
+            a few properties and a single method. In real world software development, 
+            classes like these would contain numerous properties and methods. Our goal is 
+            to learn the object-oriented design/programming concepts, Python syntax for 
+            classes and inheritance relationships.</p>
+        <p>
+            This exercise is very similar to what did in the previous exercises. This time, 
+            the instructions are not as detailed.</p>
+        <ol>
+            <li>
+                In Draw.io, create a new drawing using the UML class model template. Create 
+                a class model for a class called <strong>Person</strong> with the following 
+                properties: name, address, age. Mark these private. It will have a <em>public</em> 
+                <code>to_string()</code> method that will display a formatted string of all 
+                the properties.</li>
+            <li>
+                In your class model, add a class called <strong>Employee</strong>. Show an 
+                inheritance (often called a generalization) relationship from the 
+                <strong>Person</strong> class. With inheritance, the arrow points to the 
+                superclass or base class. In the <strong>Employee</strong> class, add the 
+                following properties: job_skills and years_worked. The <strong>Employee</strong> 
+                class will override the <code>to_string()</code> method.</li>
+            <li>
+                Add a class called <strong>Student</strong> to your model. Show an inheritance 
+                relationship from the <strong>Person</strong> class. In the <strong>Student</strong> 
+                class, add the following properties: major and units completed. The <strong>Student</strong> 
+                class will also override the <code>to_string()</code> method.</li>
+            <li>
+                Time to write some code! Create a code file called <em>Person.py</em> and a class 
+                called <strong>Person</strong>. Implement the properties and methods required from 
+                your class model. Be sure to include the to_string() method and accessors and mutators 
+                in their correct classes. Instance variables in this base class should be protected.</li>
+            <li>
+                Create a Python code file called <em>Employee.py</em>. Implement the 
+                <strong>Employee</strong> class with the required properties and methods. Be sure to 
+                inherit from the <strong>Person</strong> class. Set the instance variables in these 
+                derived class to private.</li>
+            <li>
+                Create a Python code file called <em>Student.py</em>. Implement the <strong>Student</strong> 
+                class with the required properties and methods. Inherit from the <strong>Person</strong> 
+                class.</li>
+            <li>
+                Create a Python code file called <em>PersonTest.py</em>. Prompt for the inputs needed 
+                to test the <strong>Student</strong> and <strong>Employee</strong> classes. Create an 
+                instance of each and display the values.</li>
+        </ol>
+    </div> <!-- .card-body -->
+</div> <!-- .card -->
