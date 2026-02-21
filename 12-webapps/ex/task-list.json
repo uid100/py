@@ -1,0 +1,6 @@
+[
+  { "title": "Python Web Applications", "file": "0-intro.html" },
+  { "title": "1: Read from an API", "file": "1-api_read.html" },
+  { "title": "2: Location Lookup", "file": "2-zip_lookup.html" },
+  { "title": "3: A Weather App", "file": "3-weather_app.html" }
+]

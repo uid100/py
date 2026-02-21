@@ -1,0 +1,44 @@
+<div id="ex2" style="padding: 20px;">
+    <h2>Exercise 2</h2>
+    <h3>A web application</h3>
+    <p>
+        Now let's make an application which will read the user's location from a ZIP code in 
+        the URL and return some current information about that location. This will use the 
+        Zippopotamus API which does not require an API key, and the Flask web server.
+    </p>
+    <p>
+        You can learn more about writing Python Flask apps here: https://flask.palletsprojects.com/en/3.0.x/</p>
+    <p>
+        To create and use Flask applications, you will need to install the Flask package. Once again, 
+        use the Package installer: <code>pip</code>. Pip stands for <em>Pip Installs Packages</em>.</p>
+    <p class="boxed-paragraph">
+        <code>python3 -m pip install --upgrade Flask</code>
+    </p>
+    <p>
+        This application uses the Zippopotamus API to fetch city and state information based on a zip code. 
+        It's important to note that since Zippopotamus is a free and open API, it may have limitations or 
+        inconsistencies in its data compared to more comprehensive paid APIs.</p>
+    <p>
+        Create a new Python file named <strong>location.py</strong></p>
+    <img 
+        style="display: block; margin-left: auto; margin-right: auto;" 
+        src="https://sdccd.instructure.com/courses/2497070/files/155136905/preview" 
+        alt="find city from zip code Python source" />
+    <p>
+        When you successfully run your code, you'll see that Flask has started a web server.</p>
+    <img 
+        style="display: block; margin-left: auto; margin-right: auto;" 
+        src="https://sdccd.instructure.com/courses/2497070/files/155136911/preview" 
+        alt="Flask running web service" />
+    <p>
+        Open a browser and enter http://127.0.0.1:5000/92101 in the address bar.</p>
+    <p>
+        127.0.0.1 is a special IP address known as the <em>loopback</em> or <strong>localhost</strong> address. 
+        You could also use <code>localhost:5000/92101</code> to see the same results. Try some different zipcodes 
+        on the URL <em>route</em>.</p>
+    <p>
+        The response type served from Flask is a very simple web page. You can use your browser to view the source. 
+        In the next exercise, we'll add more data and formatting.</p>
+    <hr />
+    <p style="font-style: italic; text-align: center;">Go to Exercise 3!</p>
+</div>
