@@ -1,0 +1,61 @@
+<div id="notes" style="padding: 20px;">
+    <h2>OOP - inheritance</h2>
+    <p>&nbsp;</p>
+    <p>
+        In object-oriented programming (OOP), inheritance is a powerful concept that allows 
+        you to create new classes based on existing ones. This promotes code reusability and 
+        allows you to establish a hierarchical relationship between classes.</p>
+    <h2>Understanding Class Inheritance</h2>
+    <p>
+        In Python, class inheritance is achieved by creating a new class (called a subclass 
+        or child class) that derives from an existing class (called a superclass or parent 
+        class). The child class inherits attributes and methods from the parent class, and 
+        it can also add its own attributes and methods or override existing ones.</p>
+    <h2>Example:</h2>
+    <p>Consider the following example:</p>
+    <pre><code class="language-python">
+        class Animal:
+            def __init__(self, name):
+                self.name = name
+            
+            def sound(self):
+                pass
+        
+        class Dog(Animal):
+            def sound(self):
+                return "Woof!"
+        
+        class Cat(Animal):
+            def sound(self):
+                return "Meow!"
+        
+        # Create instances of child classes
+        dog = Dog("Buddy")
+        cat = Cat("Whiskers")
+        
+        # Accessing attributes and methods
+        print(dog.name)  # Output: Buddy
+        print(dog.sound())  # Output: Woof!
+        
+        print(cat.name)  # Output: Whiskers
+        print(cat.sound())  # Output: Meow!
+            </code></pre>
+    <h2>Explanation:</h2>
+    <p>In this example:</p>
+    <ul>
+        <li>We define a parent class <code>Animal</code> with an <code>__init__</code> method to 
+            initialize the <code>name</code> attribute and a <code>sound</code> method that will 
+            be overridden by child classes.</li>
+        <li>We define two child classes <code>Dog</code> and <code>Cat</code>, each inheriting 
+            from the <code>Animal</code> class. Each child class defines its own <code>sound</code> 
+            method.</li>
+        <li>We create instances of each child class and demonstrate how they inherit the 
+            <code>name</code> attribute from the parent class and implement their own 
+            <code>sound</code> method.</li>
+    </ul>
+    <h2>Conclusion:</h2>
+    <p>Class inheritance in Python is a fundamental concept in OOP that allows you to create 
+        hierarchical relationships between classes, promoting code reuse and organization. By 
+        understanding inheritance, you can design more flexible and maintainable software.</p>
+    <p>&nbsp;</p>
+</div>

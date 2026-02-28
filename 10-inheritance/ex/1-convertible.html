@@ -1,0 +1,65 @@
+<div class="card">
+    <div class="card-header">Exercise 1: Automobile & Convertible</div>
+    <div class="card-body" id="ex1" style="padding: 20px;">
+        <h2 class="alert">Exercise 1</h2>
+        <h3>Automobile class</h3>
+        <div id="class-model">
+            <h3 class="alert">Design</h3>
+            <h3>Creating the Class Model</h3>
+            <p>
+                Open a new UML drawing in Draw.io. Drag and drop 2 classes onto the page. Fill in 
+                the class name, attributes and properties. From the exercise, we are given the 
+                Automobile class properties are Vehicle Identification Number (VIN), make, model 
+                and color. We'll add a to_string() method to return a string of all the properties. 
+                The Convertible class has the added property to indicate whether the top is up and 
+                it will have a to_string() method we&rsquo;ll override. When showing an inheritance 
+                relationship in a class model, the key thing is to have the inheritance line with 
+                the arrow pointing to the parent or base class. The class model should look something 
+                like this:
+            </p>
+            <p>
+                <img style="display: block; margin-left: auto; margin-right: auto;" 
+                src="https://uid100.github.io/py/images/automobile_class_model.png" 
+                alt="Automobile class model showing inheritance" /></p>
+            <p class="ic-flash-info"><strong>Reminder:</strong><br />The Class model is not a 
+                flowchart. Be sure to give (the class model diagram) a descriptive name.</p>
+        </div>
+        <div id="automobile">
+            <h3 class="alert">Automobile class</h3>
+            <h3>Python Code for the Automobile Class</h3>
+            <p>Create a new code file in Python called <code>Automobile</code> and a class called 
+                <code>Automobile</code> (note: classes should be upper case), code the properties, 
+                constructor, accessors and mutators (getters/setters), and to_string() method. This 
+                class will be coded like the ones we did in the last chapter with the exception that 
+                our attributes will be declared with protected access.</p>
+            <p>Protected access is just like private except that it allows derived (inherited) 
+                classes direct access</p>
+            <p><img style="display: block; margin-left: auto; margin-right: auto;" 
+                src="https://uid100.github.io/py/images/automobile_class_code.png" 
+                alt="Automobile class Python source" /></p>
+        </div>
+        <div id="convertible">
+            <h3 class="alert">Convertible class</h3>
+            <p>Now we&rsquo;re going to create a new code file called <code>Convertible</code> in 
+                Python. The added twist is in the class header where we have 
+                <code>class Convertible( Automobile )</code>, and in the <strong>constructor</strong> 
+                where we first call the inherited class constructor by using the 
+                <code>super().__init__</code> statement and then add any new initialization behavior 
+                needed.</p>
+            <p><img style="display: block; margin-left: auto; margin-right: auto;" 
+                src="https://uid100.github.io/py/images/convertible_class_code.png" 
+                alt="Convertible class Python source" /></p>
+        </div>
+        <div id="car-test">
+            <p>Create a new Python code file called <code>CarTest.py</code>. A screen shot of the 
+                code is provided below. There shouldn&rsquo;t be much in the way of surprises for 
+                the Python code.</p>
+            <p><img style="display: block; margin-left: auto; margin-right: auto;" 
+                src="https://uid100.github.io/py/images/automobile_class_test.png" 
+                alt=" Car test fixture Python source" /></p>
+        </div>
+        <hr />
+        <h3 class="alert">Don't Forget to Test!</h3>
+        <p style="font-style: italic; text-align: center;">Go to Exercise 2!</p>
+    </div> <!-- .card-body -->
+</div> <!-- .card -->

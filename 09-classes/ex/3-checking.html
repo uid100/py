@@ -1,0 +1,71 @@
+<div class="card">
+    <div class="card-header">Ex. 3: Checking Account</div>
+    <div class="card-body" id="ex3" style="padding: 20px;">
+        <div id="ex3" style="padding: 20px; ">
+            <h2>Exercise 3</h2>
+            <h3>class CheckingAccount</h3>
+            <p>
+                In this exercise, you will design and build an application that allows the user 
+                to enter information for a checking account and then display it.</p>
+            <p>
+                To do this, you will create a new class called <code>CheckingAccount</code> that 
+                will contain properties for the account number, customer name, customer address 
+                and account balance.</p>
+            <ul>
+                <li>
+                    Customer name and address should be set by the user when the account is created
+                    using parameters in the constructor. 
+                </li>
+                <li>The Account Number should be assigned by the class automatically, using a 
+                    <em>static</em>, not an <em>instance</em> variable. You can call it "counter."<br>
+                    <strong>Hint:</strong> Don't pass this as a parameter to the constructor. 
+                </li>
+                <li>
+                    The initial balance should be set to $0.00 when the account is created.<br>
+                    <strong>Hint:</strong> Don't pass this as a parameter to the constructor. 
+                    Set it in the constructor body.
+                </li>
+            </ul>
+            <ol>
+                <li>
+                    Complete a class model in draw.io. Save it as <code>CheckingAccount_ClassModel.jpg</code>
+                </li>
+                <li>
+                    Create a Python code file in your Lab folder called CheckingAccount.py</li>
+                <li>
+                    Code a constructor, getter methods, setter methods, the to_string() method<br>
+                    <ul><strong>Hint:</strong> 
+                        <li>Attributes include: account number, customer name, customer address and account balance</li>
+                        <li>The <code>balance</code> property should not have a setter method. 
+                            It will be initialized (0.0) in the constructor and then updated by the credit() and debit() methods.
+                        </li>
+                        <li>
+                            The account number should be assigned by the class automatically, using a <em>static</em>, not an <em>instance</em> variable. You can call it "counter."<br>
+                            <strong>Hint:</strong> Don't pass this as a parameter to the constructor.
+                        </li>
+                        <li>
+                            All of the properties should be coded as private (with double underscores).
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Add methods: credit() and debit(). (You may call these deposit() and withdraw() if you prefer.)</li>
+                <li>
+                    The to_string() method must return a formatted string with the values for all the 
+                    properties above.</li>
+                <li>
+                    Create a new Python code file called <code>CheckingAccountTest.py</code>. 
+                    This will be the test fixture application.</li>
+                <li>
+                    Your test fixture code will have prompts for customer name and address. Additionally, 
+                    you must have a prompt to debit an amount and a prompt to credit the account.</li>
+                <li>We'll use the constructor to set the account_number and set the initial balance to $0.00</li>
+                <li>Use the to_string() method to display the account information.</li>
+                <li>Be sure to test your work.</li>
+            </ol>
+            <hr />
+            <p style="font-style: italic; text-align: center;">Go to Exercise 4!</p>
+        </div>
+    </div> <!-- .card-body -->
+</div> <!-- .card -->
+

@@ -1,0 +1,57 @@
+<div class="card">
+    <div class="card-header">Exercise 3: Baseball Player</div>
+    <div class="card-body" id="ex3" style="padding: 20px;">
+        <h2>Exercise 3</h2>
+        <h3>Player class</h3>
+        <p>
+            For this exercise, create a general class called <strong>Player</strong> and 
+            then derive (inherit) 2 classes, <strong>BaseballPlayer</strong> and 
+            <strong>BasketballPlayer</strong>, from it.</p>
+        <p>
+            <img style="display: block; margin-left: auto; margin-right: auto;" 
+            src="https://uid100.github.io/py/images/player_class_model.png" 
+            alt="Player class hierarchy" width="553" height="338" /></p>
+        <hr />
+        <h3 class="alert">Player class Python code</h3>
+        <p>
+            Create a new Python code file called <strong>Player.py</strong>. Code a new 
+            class called <code>Player</code>. Implement the attributes, constructors, 
+            getter and setter methods, and the to_string() method.</p>
+        <p>
+            One added twist to the code is that we will add some validation to 
+            <code>setNumber()</code> to make sure a player&rsquo;s number is within 
+            some <em>reasonable</em> range. Notice the custom constructor will call 
+            <code>setNumber()</code>. The player class should look like this:</p>
+        <p>
+            <img style="display: block; margin-left: auto; margin-right: auto;" 
+                src="https://uid100.github.io/py/images/player_class_code.png" 
+                alt="Player class Python source" /></p>
+        <p>&nbsp;</p>
+        <h3 class="alert">BaseballPlayer class</h3>
+        <p>
+            Create a Python code file called <code>BaseballPlayer.py</code>, create a new 
+            class called <code>BaseballPlayer</code>, implement the attributes, constructors, 
+            getters/setters and <code>to_string()</code> method. Python screen shots are 
+            provided.</p>
+        <p>
+            In the class header, be sure it extends <code>Player</code>. Notice there is 
+            less code by inheriting from another class. Also note the user of the 
+            <code>super()</code> statement to call the inherited class 
+            <strong>constructor</strong>.</p>
+        <p>
+            In the <code>to_string(</code>) method, notice how the statement 
+            <code>super().to_string()</code> calls the <code>to_string()</code> method in the 
+            parent class saving some work.</p>
+        <p>
+            <img style="display: block; margin-left: auto; margin-right: auto;" 
+                src="https://uid100.github.io/py/images/BaseballPlayerClass.png" 
+                alt="BaseballPlayer class Python source" /></p>
+        <h3 class="alert">Player Test Fixture</h3>
+        <p>
+            <img style="display: block; margin-left: auto; margin-right: auto;" 
+                src="https://uid100.github.io/py/images/PlayerTest.png" 
+                alt="PlayerTest Python source" /></p>
+        <p>&nbsp;</p>
+        <p style="font-style: italic; text-align: center;">Go to Exercise 4!</p>
+    </div> <!-- .card-body -->
+</div> <!-- .card -->
