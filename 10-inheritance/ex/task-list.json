@@ -1,8 +1,5 @@
 [
   { "title": "Class Inheritance", "file": "0-intro.html" },
-  { "title": "1: Convertible -> Automobile", "file": "1-convertible.html" },
-  { "title": "2: Race_Car -> Automobile", "file": "2-race_car.html" },
-  { "title": "3: BaseballPlayer -> Player", "file": "3-baseball_player.html" },
-  { "title": "4: BasketballPlayer -> Player", "file": "4-basketball_player.html" },
-  { "title": "5: Student, Employee -> Person", "file": "5-person.html" }
+  { "title": "1: tkinter: MPG Calculator", "file": "1-mpg_calc_gui.html" },
+  { "title": "2: matplotlib widgets: Interactive Sine Wave", "file": "2-pi_estimation.html" }
 ]
