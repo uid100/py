@@ -1,0 +1,172 @@
+<div class="container my-4">
+
+  <!-- Introduction Card -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title">From Step-by-Step Programs to Event-Driven Programs</h3>
+      <p class="card-text">
+        So far in this course, you have written programs that follow a clear, predictable flow:
+        instructions run in sequence, decisions are made with conditionals, and repetition is handled
+        with loops. You then learned how to organize programs using functions, modules, and
+        object-oriented programming (OOP).
+      </p>
+      <p class="card-text">
+        This approach is known as <strong>sequential programming</strong>. It works very well for
+        many types of problems, especially when the program has a clear start, middle, and end.
+        However, many real-world applications—especially those with graphical user interfaces (GUIs)—
+        do not run from top to bottom in a straight line.
+      </p>
+      <p class="card-text">
+        To build interactive applications, we need a different way of thinking about program flow:
+        <strong>event-driven programming</strong>.
+      </p>
+    </div>
+  </div>
+
+  <!-- What Is Event-Driven Programming -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title">What Is Event-Driven Programming?</h3>
+      <p class="card-text">
+        <strong>Event-driven programming</strong> is a programming paradigm where the flow of the
+        program is determined by <em>events</em> rather than a fixed sequence of instructions.
+      </p>
+      <p class="card-text">
+        An <strong>event</strong> is something that happens while a program is running, such as:
+      </p>
+      <ul>
+        <li>A user clicking a button</li>
+        <li>A key being pressed on the keyboard</li>
+        <li>The mouse moving over a window</li>
+        <li>A timer reaching a certain time</li>
+      </ul>
+      <p class="card-text">
+        In an event-driven program, the application spends most of its time waiting for events to
+        occur. When an event happens, the program responds by running specific code designed to
+        handle that event.
+      </p>
+    </div>
+  </div>
+
+  <!-- Triggers and Event Handlers -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title">Events, Triggers, and Event Handlers</h3>
+      <p class="card-text">
+        Two key concepts in event-driven programming are <strong>triggers</strong> and
+        <strong>event handlers</strong>.
+      </p>
+      <p class="card-text">
+        A <strong>trigger</strong> is the condition or action that causes an event to occur. For
+        example:
+      </p>
+      <ul>
+        <li>Clicking a button triggers a “button click” event</li>
+        <li>Pressing the Enter key triggers a “key press” event</li>
+        <li>Closing a window triggers a “window close” event</li>
+      </ul>
+      <p class="card-text">
+        An <strong>event handler</strong> is a function or method that runs in response to a specific
+        event. You can think of an event handler as a specialized function whose job is to respond to
+        exactly one type of event.
+      </p>
+      <p class="card-text">
+        This concept should feel familiar: event handlers are usually written as functions or
+        methods, and in object-oriented programs they are often methods of a class.
+      </p>
+    </div>
+  </div>
+
+  <!-- Event Loop -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title">The Event Loop</h3>
+      <p class="card-text">
+        Event-driven programs rely on an <strong>event loop</strong>. The event loop is a part of the
+        framework or library (not your code) that:
+      </p>
+      <ul>
+        <li>Waits for events to occur</li>
+        <li>Detects when an event has happened</li>
+        <li>Calls the correct event handler</li>
+      </ul>
+      <p class="card-text">
+        Instead of writing a <code>while True</code> loop yourself, the event loop runs continuously
+        behind the scenes. Your job as a programmer is to define what should happen when certain
+        events occur.
+      </p>
+      <p class="card-text">
+        This is why event-driven programs may seem unusual at first: the program does not explicitly
+        control the order in which things happen. The user’s actions do.
+      </p>
+    </div>
+  </div>
+
+  <!-- GUIs -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title">Graphical User Interfaces (GUIs)</h3>
+      <p class="card-text">
+        A <strong>graphical user interface (GUI)</strong> allows users to interact with a program
+        using visual elements such as windows, buttons, labels, text boxes, sliders, and charts.
+      </p>
+      <p class="card-text">
+        GUIs are a natural fit for event-driven programming because nearly everything a user does
+        in a GUI generates events. Each button click, mouse movement, or key press is an event that
+        can trigger code to run.
+      </p>
+      <p class="card-text">
+        In a GUI-based program:
+      </p>
+      <ul>
+        <li>The program creates and displays interface elements</li>
+        <li>Event handlers are connected to those elements</li>
+        <li>The event loop waits for user interaction</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Connecting to Python -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title">Event-Driven Programming in Python</h3>
+      <p class="card-text">
+        Python supports event-driven programming through a variety of libraries and frameworks.
+        In this course, you will be introduced to two important tools:
+      </p>
+      <ul>
+        <li>
+          <strong>tkinter</strong> – Python’s standard library for building graphical user interfaces
+          with buttons, windows, and other widgets
+        </li>
+        <li>
+          <strong>matplotlib widgets</strong> – interactive controls (such as sliders and buttons)
+          used with graphs and visualizations
+        </li>
+      </ul>
+      <p class="card-text">
+        Both libraries use event-driven design. You will write functions that respond to user actions,
+        and the framework will handle the event loop for you.
+      </p>
+    </div>
+  </div>
+
+  <!-- Summary -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title">Key Takeaways</h3>
+      <ul>
+        <li>Event-driven programming responds to events rather than running strictly top-to-bottom</li>
+        <li>Events are triggered by user actions or system conditions</li>
+        <li>Event handlers are functions or methods that run when an event occurs</li>
+        <li>GUIs rely heavily on event-driven programming</li>
+        <li>Python libraries like tkinter and matplotlib widgets make event-driven programming accessible</li>
+      </ul>
+      <p class="card-text">
+        In the next lessons, you will begin creating your own event-driven programs, starting with
+        simple GUIs and interactive visualizations.
+      </p>
+    </div>
+  </div>
+
+</div>
