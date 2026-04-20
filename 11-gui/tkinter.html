@@ -1,0 +1,185 @@
+<div class="container my-4">
+
+  <!-- Introduction -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title">Introduction to tkinter</h3>
+      <p class="card-text">
+        <strong>tkinter</strong> is Python’s standard library for creating graphical user interfaces (GUIs).
+        It allows you to build programs with windows, buttons, labels, and text fields instead of relying
+        only on text input and output in the console.
+      </p>
+      <p class="card-text">
+        tkinter programs are <strong>event-driven</strong>. This means your program waits for the user
+        to do something—such as clicking a button—and then responds by running the appropriate code.
+      </p>
+      <p class="card-text">
+        In this handout, you will build a simple tkinter application step by step to see how GUI programs
+        are structured.
+      </p>
+    </div>
+  </div>
+
+  <!-- Basic Structure -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title">The Basic Structure of a tkinter Program</h3>
+      <p class="card-text">
+        Most tkinter programs follow the same basic pattern:
+      </p>
+      <ol>
+        <li>Import the tkinter module</li>
+        <li>Create the main application window</li>
+        <li>Create widgets (labels, buttons, etc.)</li>
+        <li>Place widgets in the window</li>
+        <li>Start the event loop</li>
+      </ol>
+      <p class="card-text">
+        You will see each of these steps as you build your first app.
+      </p>
+    </div>
+  </div>
+
+  <!-- Step 1 -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title">Step 1: Import tkinter</h3>
+      <p class="card-text">
+        Start by importing the tkinter library. The common convention is to import it with the name
+        <code>tk</code>.
+      </p>
+<pre><code>import tkinter as tk</code></pre>
+      <p class="card-text">
+        This allows you to access tkinter classes and functions using the <code>tk.</code> prefix.
+      </p>
+    </div>
+  </div>
+
+  <!-- Step 2 -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title">Step 2: Create the Main Window</h3>
+      <p class="card-text">
+        Every tkinter application needs a main window. This window acts as the container for all
+        other GUI elements.
+      </p>
+<pre><code>root = tk.Tk()
+root.title("My First tkinter App")</code></pre>
+      <p class="card-text">
+        The <code>Tk()</code> object represents the main application window. Setting a title helps
+        users identify your program.
+      </p>
+    </div>
+  </div>
+
+  <!-- Step 3 -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title">Step 3: Create a Label Widget</h3>
+      <p class="card-text">
+        A <strong>Label</strong> is a widget that displays text in the window.
+      </p>
+<pre><code>label = tk.Label(root, text="Hello, tkinter!")</code></pre>
+      <p class="card-text">
+        The first argument (<code>root</code>) specifies the parent window. The <code>text</code>
+        argument defines what the label will display.
+      </p>
+    </div>
+  </div>
+
+  <!-- Step 4 -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title">Step 4: Place the Widget in the Window</h3>
+      <p class="card-text">
+        Creating a widget does not automatically display it. You must tell tkinter where to place it.
+        One simple layout method is <code>pack()</code>.
+      </p>
+<pre><code>label.pack()</code></pre>
+      <p class="card-text">
+        The <code>pack()</code> method automatically positions the widget in the window.
+      </p>
+    </div>
+  </div>
+
+  <!-- Step 5 -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title">Step 5: Add a Button and an Event Handler</h3>
+      <p class="card-text">
+        Buttons are interactive widgets. When a button is clicked, it triggers an event.
+        The code that runs in response is called an <strong>event handler</strong>.
+      </p>
+      <p class="card-text">
+        First, define a function that will run when the button is clicked.
+      </p>
+<pre><code>def on_button_click():
+    label.config(text="Button clicked!")</code></pre>
+      <p class="card-text">
+        Next, create the button and connect it to the function using the <code>command</code> option.
+      </p>
+<pre><code>button = tk.Button(root, text="Click Me", command=on_button_click)
+button.pack()</code></pre>
+    </div>
+  </div>
+
+  <!-- Step 6 -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title">Step 6: Start the Event Loop</h3>
+      <p class="card-text">
+        The final step is to start the tkinter event loop. This tells Python to wait for events such
+        as button clicks and window actions.
+      </p>
+<pre><code>root.mainloop()</code></pre>
+      <p class="card-text">
+        Once <code>mainloop()</code> is running, your program responds to user actions until the
+        window is closed.
+      </p>
+    </div>
+  </div>
+
+  <!-- Full Example -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title">Complete Example Program</h3>
+      <p class="card-text">
+        Below is the complete program with all steps combined.
+      </p>
+<pre><code>import tkinter as tk
+
+def on_button_click():
+    label.config(text="Button clicked!")
+
+root = tk.Tk()
+root.title("My First tkinter App")
+
+label = tk.Label(root, text="Hello, tkinter!")
+label.pack()
+
+button = tk.Button(root, text="Click Me", command=on_button_click)
+button.pack()
+
+root.mainloop()</code></pre>
+    </div>
+  </div>
+
+  <!-- Summary -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title">What You Learned</h3>
+      <ul>
+        <li>tkinter is Python’s standard GUI library</li>
+        <li>GUI programs are event-driven</li>
+        <li>Widgets such as labels and buttons create the user interface</li>
+        <li>Event handlers respond to user actions</li>
+        <li>The event loop keeps the application running</li>
+      </ul>
+      <p class="card-text">
+        In the next lessons, you will explore additional widgets and learn how to build more
+        interactive and useful GUI applications.
+      </p>
+    </div>
+  </div>
+
+</div>

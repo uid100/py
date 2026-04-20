@@ -1,0 +1,214 @@
+<div class="container my-4">
+
+  <!-- Introduction -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title">Introduction to Matplotlib and Interactive Widgets</h3>
+      <p class="card-text">
+        <strong>matplotlib</strong> is a Python library used to create graphs and visualizations such
+        as line plots, bar charts, and scatter plots. It is commonly used in data analysis,
+        science, and engineering.
+      </p>
+      <p class="card-text">
+        In addition to creating static graphs, matplotlib also supports
+        <strong>interactive widgets</strong>. These widgets allow users to interact with a graph
+        using GUI elements such as sliders and buttons.
+      </p>
+      <p class="card-text">
+        Like tkinter, matplotlib widgets are based on
+        <strong>event-driven programming</strong>. User actions trigger events, and your code
+        responds by updating the graph.
+      </p>
+    </div>
+  </div>
+
+  <!-- When to Use Matplotlib Widgets -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title">When to Use Matplotlib Widgets</h3>
+      <p class="card-text">
+        Matplotlib widgets are especially useful when:
+      </p>
+      <ul>
+        <li>You want to explore how changing values affects a graph</li>
+        <li>You need simple interactivity without building a full GUI window</li>
+        <li>You are working with scientific or numerical data</li>
+      </ul>
+      <p class="card-text">
+        The graph window itself acts as the user interface, and widgets are placed directly
+        inside it.
+      </p>
+    </div>
+  </div>
+
+  <!-- Example Overview -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title">Example: Interactive Sine Wave</h3>
+      <p class="card-text">
+        In this example, you will build a graph that displays a sine wave.
+        A <strong>slider</strong> will allow the user to change the frequency of the wave.
+      </p>
+      <p class="card-text">
+        When the slider is moved:
+      </p>
+      <ul>
+        <li>An event is triggered</li>
+        <li>An event handler function runs</li>
+        <li>The graph updates automatically</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Step 1 -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title">Step 1: Import Required Libraries</h3>
+      <p class="card-text">
+        Import matplotlib, NumPy, and the Slider widget.
+      </p>
+<pre><code>import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.widgets import Slider</code></pre>
+      <p class="card-text">
+        NumPy is used for numerical calculations, while matplotlib handles the graph and widgets.
+      </p>
+    </div>
+  </div>
+
+  <!-- Step 2 -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title">Step 2: Create the Initial Plot</h3>
+      <p class="card-text">
+        First, create the data and draw the initial sine wave.
+      </p>
+<pre><code>x = np.linspace(0, 2 * np.pi, 400)
+frequency = 1
+y = np.sin(frequency * x)
+
+fig, ax = plt.subplots()
+line, = ax.plot(x, y)
+ax.set_title("Interactive Sine Wave")</code></pre>
+      <p class="card-text">
+        The variable <code>line</code> stores the plotted line so it can be updated later.
+      </p>
+    </div>
+  </div>
+
+  <!-- Step 3 -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title">Step 3: Add a Slider Widget</h3>
+      <p class="card-text">
+        Sliders need their own area in the figure. This area is defined using figure coordinates.
+      </p>
+<pre><code>plt.subplots_adjust(bottom=0.25)
+
+slider_ax = plt.axes([0.2, 0.1, 0.6, 0.03])
+freq_slider = Slider(
+    ax=slider_ax,
+    label="Frequency",
+    valmin=0.5,
+    valmax=5.0,
+    valinit=1.0
+)</code></pre>
+      <p class="card-text">
+        The slider lets the user choose a frequency value between 0.5 and 5.0.
+      </p>
+    </div>
+  </div>
+
+  <!-- Step 4 -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title">Step 4: Create the Event Handler</h3>
+      <p class="card-text">
+        This function runs whenever the slider value changes.
+      </p>
+<pre><code>def update(val):
+    frequency = freq_slider.val
+    line.set_ydata(np.sin(frequency * x))
+    fig.canvas.draw_idle()</code></pre>
+      <p class="card-text">
+        This function recalculates the sine wave and redraws the graph.
+      </p>
+    </div>
+  </div>
+
+  <!-- Step 5 -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title">Step 5: Connect the Slider to the Event Handler</h3>
+      <p class="card-text">
+        Connect the slider to the update function.
+      </p>
+<pre><code>freq_slider.on_changed(update)</code></pre>
+      <p class="card-text">
+        This line tells matplotlib which function to run when the slider is moved.
+      </p>
+    </div>
+  </div>
+
+  <!-- Step 6 -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title">Step 6: Display the Application</h3>
+      <p class="card-text">
+        Finally, display the interactive plot window.
+      </p>
+<pre><code>plt.show()</code></pre>
+      <p class="card-text">
+        The program now waits for user interaction, responding to slider movements.
+      </p>
+    </div>
+  </div>
+
+  <!-- Full Example -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title">Complete Example Program</h3>
+<pre><code>import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.widgets import Slider
+
+x = np.linspace(0, 2 * np.pi, 400)
+y = np.sin(x)
+
+fig, ax = plt.subplots()
+line, = ax.plot(x, y)
+ax.set_title("Interactive Sine Wave")
+
+plt.subplots_adjust(bottom=0.25)
+
+slider_ax = plt.axes([0.2, 0.1, 0.6, 0.03])
+freq_slider = Slider(slider_ax, "Frequency", 0.5, 5.0, valinit=1.0)
+
+def update(val):
+    line.set_ydata(np.sin(freq_slider.val * x))
+    fig.canvas.draw_idle()
+
+freq_slider.on_changed(update)
+
+plt.show()</code></pre>
+    </div>
+  </div>
+
+  <!-- Summary -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title">Key Takeaways</h3>
+      <ul>
+        <li>matplotlib can create interactive, event-driven graphs</li>
+        <li>Widgets such as sliders respond to user input</li>
+        <li>Event handlers update the visualization</li>
+        <li>The graph window acts as a lightweight GUI</li>
+      </ul>
+      <p class="card-text">
+        In future lessons, you will combine matplotlib widgets with more complex data
+        and explore buttons, animations, and real-time updates.
+      </p>
+    </div>
+  </div>
+
+</div>
