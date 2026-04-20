@@ -48,7 +48,7 @@
         Start by importing the tkinter library. The common convention is to import it with the name
         <code>tk</code>.
       </p>
-<pre><code>import tkinter as tk</code></pre>
+<pre style="background-color: pink;"><code>import tkinter as tk</code></pre>
       <p class="card-text">
         This allows you to access tkinter classes and functions using the <code>tk.</code> prefix.
       </p>
@@ -63,7 +63,7 @@
         Every tkinter application needs a main window. This window acts as the container for all
         other GUI elements.
       </p>
-<pre><code>root = tk.Tk()
+<pre style="background-color: pink;"><code>root = tk.Tk()
 root.title("My First tkinter App")</code></pre>
       <p class="card-text">
         The <code>Tk()</code> object represents the main application window. Setting a title helps
@@ -79,7 +79,7 @@ root.title("My First tkinter App")</code></pre>
       <p class="card-text">
         A <strong>Label</strong> is a widget that displays text in the window.
       </p>
-<pre><code>label = tk.Label(root, text="Hello, tkinter!")</code></pre>
+<pre style="background-color: pink;"><code>label = tk.Label(root, text="Hello, tkinter!")</code></pre>
       <p class="card-text">
         The first argument (<code>root</code>) specifies the parent window. The <code>text</code>
         argument defines what the label will display.
@@ -95,7 +95,7 @@ root.title("My First tkinter App")</code></pre>
         Creating a widget does not automatically display it. You must tell tkinter where to place it.
         One simple layout method is <code>pack()</code>.
       </p>
-<pre><code>label.pack()</code></pre>
+<pre style="background-color: pink;"><code>label.pack()</code></pre>
       <p class="card-text">
         The <code>pack()</code> method automatically positions the widget in the window.
       </p>
@@ -113,12 +113,12 @@ root.title("My First tkinter App")</code></pre>
       <p class="card-text">
         First, define a function that will run when the button is clicked.
       </p>
-<pre><code>def on_button_click():
+<pre style="background-color: pink;"><code>def on_button_click():
     label.config(text="Button clicked!")</code></pre>
       <p class="card-text">
         Next, create the button and connect it to the function using the <code>command</code> option.
       </p>
-<pre><code>button = tk.Button(root, text="Click Me", command=on_button_click)
+<pre style="background-color: pink;"><code>button = tk.Button(root, text="Click Me", command=on_button_click)
 button.pack()</code></pre>
     </div>
   </div>
@@ -131,7 +131,7 @@ button.pack()</code></pre>
         The final step is to start the tkinter event loop. This tells Python to wait for events such
         as button clicks and window actions.
       </p>
-<pre><code>root.mainloop()</code></pre>
+<pre style="background-color: pink;"><code>root.mainloop()</code></pre>
       <p class="card-text">
         Once <code>mainloop()</code> is running, your program responds to user actions until the
         window is closed.
@@ -168,7 +168,7 @@ root.mainloop()</code></pre>
     <p>&nbsp;</p>
     <div class="card-body">
       <ul>
-        <li>tkinter is Python’s standard GUI library</li>
+        <li>tkinter is Python's standard GUI library</li>
         <li>GUI programs are event-driven</li>
         <li>Widgets such as labels and buttons create the user interface</li>
         <li>Event handlers respond to user actions</li>
