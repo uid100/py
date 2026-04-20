@@ -67,7 +67,7 @@
       <p class="card-text">
         Import matplotlib, NumPy, and the Slider widget.
       </p>
-<pre><code>import numpy as np
+<pre style="background-color: pink;"><code>import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.widgets import Slider</code></pre>
       <p class="card-text">
@@ -76,6 +76,73 @@ from matplotlib.widgets import Slider</code></pre>
     </div>
   </div>
 
+  <!-- Installing Required Libraries -->
+<div class="card mb-4">
+  <div class="card-body">
+    <h3 class="card-title">Installing Required Python Libraries</h3>
+    <p class="card-text">
+      Some of the libraries used in this lesson are <strong>not included with Python by default</strong>.
+      Before running the examples, you may need to install additional packages.
+    </p>
+    <p class="card-text">
+      For this lesson, make sure the following libraries are installed:
+    </p>
+    <ul>
+      <li><strong>NumPy</strong> – for numerical calculations</li>
+      <li><strong>matplotlib</strong> – for plotting graphs and using widgets</li>
+    </ul>
+
+    <hr>
+
+    <h5>Step 1: Open a Terminal or Command Prompt</h5>
+    <p class="card-text">
+      You will install libraries using a tool called <strong>pip</strong>, which comes with Python.
+    </p>
+    <ul>
+      <li><strong>Windows:</strong> Open <em>Command Prompt</em> or <em>Windows Terminal</em></li>
+      <li><strong>macOS:</strong> Open <em>Terminal</em> (Applications → Utilities → Terminal)</li>
+    </ul>
+
+    <hr>
+
+    <h5>Step 2: Run the Installation Command</h5>
+    <p class="card-text">
+      Type the following command and press Enter:
+    </p>
+<pre><code>python -m pip install numpy matplotlib</code></pre>
+    <p class="card-text">
+      If your system uses <code>python3</code> instead of <code>python</code>, use:
+    </p>
+<pre><code>python3 -m pip install numpy matplotlib</code></pre>
+
+    <hr>
+
+    <h5>Step 3: Verify the Installation</h5>
+    <p class="card-text">
+      To confirm the libraries were installed correctly, start Python and try importing them:
+    </p>
+<pre><code>import numpy
+import matplotlib</code></pre>
+    <p class="card-text">
+      If no error messages appear, the installation was successful.
+    </p>
+
+    <hr>
+
+    <h5>Troubleshooting Tips</h5>
+    <ul>
+      <li>Make sure you are using the same Python version that you run your programs with</li>
+      <li>If you see a “permission denied” error on macOS, try adding <code>--user</code> to the command</li>
+      <li>If pip is not found, verify that Python is correctly installed and added to your system path</li>
+    </ul>
+
+    <p class="card-text">
+      Once these libraries are installed, you are ready to run the interactive matplotlib examples
+      in this lesson.
+    </p>
+  </div>
+</div>
+
   <!-- Step 2 -->
   <div class="card mb-4">
     <div class="card-body">
@@ -83,7 +150,7 @@ from matplotlib.widgets import Slider</code></pre>
       <p class="card-text">
         First, create the data and draw the initial sine wave.
       </p>
-<pre><code>x = np.linspace(0, 2 * np.pi, 400)
+<pre style="background-color: pink;"><code>x = np.linspace(0, 2 * np.pi, 400)
 frequency = 1
 y = np.sin(frequency * x)
 
@@ -103,7 +170,7 @@ ax.set_title("Interactive Sine Wave")</code></pre>
       <p class="card-text">
         Sliders need their own area in the figure. This area is defined using figure coordinates.
       </p>
-<pre><code>plt.subplots_adjust(bottom=0.25)
+<pre style="background-color: pink;"><code>plt.subplots_adjust(bottom=0.25)
 
 slider_ax = plt.axes([0.2, 0.1, 0.6, 0.03])
 freq_slider = Slider(
@@ -126,7 +193,7 @@ freq_slider = Slider(
       <p class="card-text">
         This function runs whenever the slider value changes.
       </p>
-<pre><code>def update(val):
+<pre style="background-color: pink;"><code>def update(val):
     frequency = freq_slider.val
     line.set_ydata(np.sin(frequency * x))
     fig.canvas.draw_idle()</code></pre>
@@ -143,7 +210,7 @@ freq_slider = Slider(
       <p class="card-text">
         Connect the slider to the update function.
       </p>
-<pre><code>freq_slider.on_changed(update)</code></pre>
+<pre style="background-color: pink;"><code>freq_slider.on_changed(update)</code></pre>
       <p class="card-text">
         This line tells matplotlib which function to run when the slider is moved.
       </p>
@@ -157,7 +224,7 @@ freq_slider = Slider(
       <p class="card-text">
         Finally, display the interactive plot window.
       </p>
-<pre><code>plt.show()</code></pre>
+<pre style="background-color: pink;"><code>plt.show()</code></pre>
       <p class="card-text">
         The program now waits for user interaction, responding to slider movements.
       </p>
@@ -168,7 +235,7 @@ freq_slider = Slider(
   <div class="card mb-4">
     <div class="card-body">
       <h3 class="card-title">Complete Example Program</h3>
-<pre><code>import numpy as np
+<pre style="background-color: pink;"><code>import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.widgets import Slider
 
