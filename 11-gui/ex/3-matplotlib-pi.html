@@ -16,6 +16,41 @@
         sample sizes using GUI controls. This makes it both interactive
         and visual.
       </p>
+      <h4>Objectives</h4>
+        <ul>
+            <li>Understand the concept of Monte Carlo simulations</li>
+            <li>Learn how randomness can be used to approximate real values</li>
+            <li>See how event-driven programs respond to user input</li>
+            <li>Understand how visualization improves understanding</li>
+            <li>Learn how scientific Python tools are structured</li>
+        </ul>
+    </div>
+  </div>
+
+  <!-- Card: Installing Libraries -->
+  <div class="card mb-3">
+    <div class="card-body">
+      <h4 class="card-title">Installing Required Libraries</h4>
+      <p class="card-text">
+        This program requires Python and the Matplotlib library.
+      </p>
+      <p>
+        Most systems already include the <code>random</code> and
+        <code>math</code> modules. If Matplotlib is not installed, use:
+      </p>
+      <pre>
+pip install matplotlib
+      </pre>
+      <p>
+        On some systems, you may need:
+      </p>
+      <pre>
+python -m pip install matplotlib
+      </pre>
+      <p>
+        After installation, restart your IDE to ensure the library
+        is recognized.
+      </p>
     </div>
   </div>
 
@@ -25,7 +60,10 @@
       <h4 class="card-title">What Is the Monte Carlo Method?</h4>
       <p>
         The Monte Carlo method uses <strong>random sampling</strong> to estimate
-        numerical values. For estimating π:
+        numerical values.
+      </p>
+      <p>
+        For estimating π:
       </p>
       <ul>
         <li>Imagine a unit square (1 × 1)</li>
@@ -51,38 +89,12 @@
     </div>
   </div>
 
-  <!--Below is a **partial HTML student handout** (no `<head>` or `<body>` tags) that walks students through the **event‑driven Monte Carlo π estimator with Matplotlib**, using **Bootstrap cards** only (no custom styling, so you can apply your own CSS).
-
----
-
-```html
-<!-- Monte Carlo Pi Estimation with Matplotlib - Student Handout -->
-
-<div class="container my-4">
-
-  <!-- Card: Overview -->
-  <div class="card mb-3">
-    <div class="card-body">
-      <h3 class="card-title">Estimating π with the Monte Carlo Method</h3>
-      <p class="card-text">
-        This program demonstrates an <strong>event‑driven scientific visualization</strong>
-        using Python, <code>matplotlib</code>, and the <strong>Monte Carlo method</strong>.
-        Instead of computing π directly with a formula, we estimate it by
-        repeatedly sampling random points and visualizing the results.
-      </p>
-      <p>
-        The program displays a scatter plot that updates dynamically
-        when the user selects a different number of random samples.
-      </p>
-    </div>
-  </div>
-
   <!-- Card: Event-Driven Model -->
   <div class="card mb-3">
     <div class="card-body">
-      <h4 class="card-title">Why This Is Event‑Driven</h4>
+      <h4 class="card-title">Why This Is Event-Driven</h4>
       <p class="card-text">
-        This program is <strong>event‑driven</strong> because the main computation
+        This program is <strong>event-driven</strong> because the main computation
         does not run in a fixed loop. Instead, it responds to user interaction.
       </p>
       <ul>
@@ -91,33 +103,6 @@
         <li>An event is triggered when the selection changes</li>
         <li>A callback function reruns the simulation and updates the plot</li>
       </ul>
-      <p>
-        This mirrors how real scientific tools and dashboards behave.
-      </p>
-    </div>
-  </div>
-
-  <!-- Card: Monte Carlo Concept -->
-  <div class="card mb-3">
-    <div class="card-body">
-      <h4 class="card-title">The Monte Carlo Method</h4>
-      <p class="card-text">
-        The Monte Carlo method uses <strong>random sampling</strong> to solve
-        problems that may be difficult or expensive to calculate directly.
-      </p>
-      <p>
-        To estimate π:
-      </p>
-      <ul>
-        <li>Imagine a 1×1 square</li>
-        <li>Inside it, place a quarter‑circle of radius 1</li>
-        <li>Randomly generate points inside the square</li>
-        <li>Count how many land inside the circle</li>
-      </ul>
-      <p>
-        Since the area of the quarter‑circle is <code>π / 4</code>,
-        the ratio of points inside the circle approximates that same value.
-      </p>
     </div>
   </div>
 
@@ -127,21 +112,23 @@
       <h4 class="card-title">Generating Random Points</h4>
       <p class="card-text">
         The <code>get_points</code> function generates random coordinates
-        using Python’s <code>random.random()</code> function.
+        using Python's <code>random.random()</code> function.
       </p>
-      <pre>
-x = random.random()
-y = random.random()
-      </pre>
+      <pre class="bg-light p-2"><code>
+    x = random.random()
+    y = random.random()</code></pre>
       <p>
-        Each point is tested using the equation:
+        For each point generated, calculate the distance from the origin (0, 0) 
+        using the pythagorean theorem. The distance (hypotenuse) is the square
+        root of the sum of the square of the <em>x</em> and <em>y</em> coordinates.
       </p>
-      <pre>
-x² + y² ≤ 1
-      </pre>
       <p>
-        Points that satisfy this condition lie inside the quarter‑circle.
-        Others are classified as outside.
+        Refering back to the diagram, points that are less than the circle radius away
+        from the origin are inside the circle. Others are outside.
+      </p>
+      <p>
+        Since the area of the circle is π/4 * the area of the square, the ratio of
+        inside points to total points can be multiplied by 4 to get an estimate of π.
       </p>
     </div>
   </div>
@@ -173,12 +160,11 @@ x² + y² ≤ 1
     <div class="card-body">
       <h4 class="card-title">Measuring Error</h4>
       <p class="card-text">
-        The program compares the estimate with Python’s built‑in
+        The program compares the estimate with Python's built-in
         value of π from the <code>math</code> module.
       </p>
-      <pre>
-error = |estimate − actual| / actual × 100
-      </pre>
+      <pre class="bg-light p-2"><code>
+    error = |estimate - actual| / actual * 100</code></pre>
       <p>
         Displaying percentage error reinforces numerical accuracy
         and convergence concepts.
@@ -191,18 +177,17 @@ error = |estimate − actual| / actual × 100
     <div class="card-body">
       <h4 class="card-title">User Interaction with Radio Buttons</h4>
       <p class="card-text">
-        Matplotlib’s <code>RadioButtons</code> widget allows the user
+        Matplotlib's <code>RadioButtons</code> widget allows the user
         to select different sample sizes.
       </p>
       <p>
         When the selection changes, this line connects the event
         to the handler:
       </p>
-      <pre>
-radio.on_clicked(lambda label: draw_plot(fig, ax, int(label)))
-      </pre>
+      <pre class="bg-light p-2"><code>
+radio.on_clicked(lambda label: draw_plot(fig, ax, int(label)))</code></pre>
       <p>
-        This is a direct example of event‑driven programming:
+        This is a direct example of event-driven programming:
         the visualization responds immediately to user input.
       </p>
     </div>
@@ -216,7 +201,7 @@ radio.on_clicked(lambda label: draw_plot(fig, ax, int(label)))
         <li>Create the figure and axes</li>
         <li>Draw the initial plot</li>
         <li>Register radio button event handlers</li>
-        <li>Start Matplotlib’s event loop with <code>plt.show()</code></li>
+        <li>Start Matplotlib's event loop with <code>plt.show()</code></li>
       </ol>
       <p>
         Once <code>plt.show()</code> is called, Matplotlib takes over
@@ -225,45 +210,30 @@ radio.on_clicked(lambda label: draw_plot(fig, ax, int(label)))
     </div>
   </div>
 
-  <!-- Card: Installing Libraries -->
-  <div class="card mb-3">
+  <div class="card mb-4">
     <div class="card-body">
-      <h4 class="card-title">Installing Required Libraries</h4>
-      <p class="card-text">
-        This program requires Python and the Matplotlib library.
-      </p>
-      <p>
-        Most systems already include the <code>random</code> and
-        <code>math</code> modules. If Matplotlib is not installed, use:
-      </p>
-      <pre>
-pip install matplotlib
-      </pre>
-      <p>
-        On some systems, you may need:
-      </p>
-      <pre>
-python -m pip install matplotlib
-      </pre>
-      <p>
-        After installation, restart your IDE to ensure the library
-        is recognized.
-      </p>
-    </div>
-  </div>
+      <h4>Code listing</h4>
+        <p>
+          Use the provided code to run and test to see how the GUI works.
+        </p>
+        <p>
+            Be sure to follow along with the explanation above to understand how the code 
+            is structured and how the different components work together to create an interactive
+            visualization.
+        </p>
+        <p style="font-style: italic;">
+            Remember to install the required libraries to run the code successfully.
+        </p>
+        <p>
+          <img src="https://uid100.github.io/py/images/pi-py-1.png"
+                alt="Pi Estimation GUI code listing part 1 of 2"
+                class="img-fluid">
+          <img src="https://uid100.github.io/py/images/pi-py-2.png"
+                alt="Pi Estimation GUI code listing part 2 of 2"
+                class="img-fluid">
+        </p>
+    </div> <!-- End of card body -->
+  </div> <!-- End of card -->
 
-  <!-- Card: Learning Outcomes -->
-  <div class="card mb-3">
-    <div class="card-body">
-      <h4 class="card-title">What You Should Learn from This Program</h4>
-      <ul>
-        <li>How Monte Carlo simulations work</li>
-        <li>How randomness can approximate real values</li>
-        <li>How event‑driven programs respond to user input</li>
-        <li>How visualization improves understanding</li>
-        <li>How scientific Python tools are structured</li>
-      </ul>
-    </div>
-  </div>
 
 </div>
