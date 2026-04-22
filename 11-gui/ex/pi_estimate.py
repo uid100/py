@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 
+# Santa Fe College CSC 1107 - Python Programming
+# Your Name Here
 # Estimate pi using the Monte Carlo method
 
 import random
-from xml.etree.ElementTree import PI
+# from xml.etree.ElementTree import PI
 import matplotlib.pyplot as plt
 from matplotlib.widgets import RadioButtons
 import math
@@ -59,3 +61,6 @@ def random_plot(num_samples=100):
 
 if __name__ == "__main__":
     random_plot()
+
+
+
