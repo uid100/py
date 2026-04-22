@@ -60,87 +60,88 @@
             </p>
         </div> <!-- End of card body -->
     </div> <!-- End of card -->
-    
+
     <div class="card mb-4">
-        <div class="card-body">
-        <h3>Code Explanation</h3>
-            <h4>Importing Tkinter</h4>
-            <pre class="bg-light p-3">
-            from tkinter import *
-            </pre>
-
-            <p>
-                This line imports everything from the <code>tkinter</code> module so we can easily use
-                widgets like <code>Label</code>, <code>Entry</code>, <code>Button</code>, and <code>Tk</code>.
-            </p>
-
-            <p>
-                Tkinter is Python's standard GUI library and is included with Python installations.
-            </p>
-
-            <h4>Event Handler Functions</h4>
-
-            <h3>The Calculate Button Handler</h3>
-            <pre class="bg-light p-3">
-            def calculate_mpg():
-            </pre>
-
-            <p>
-            This function is an <strong>event handler</strong>. It is not executed immediately.
-            Instead, it runs only when the user clicks the <strong>Calculate MPG</strong> button.
-            </p>
-
-            <h4>Getting User Input</h4>
-            <pre class="bg-light p-3">
-            miles = float(miles_entry.get())
-            gallons = float(gallons_entry.get())
-            </pre>
-
-            <p>
-            The <code>.get()</code> method retrieves text from an Entry widget.
-            Because Entry widgets store text, the values must be converted to
-            <code>float</code> before performing calculations.
-            </p>
-
-            <h4>Performing Calculations</h4>
-            <pre class="bg-light p-3">
-            mpg = miles / gallons
-            cost_per_gallon = float(cost_entry.get())
-            total_cost = gallons * cost_per_gallon
-            cost_per_mile = total_cost / miles
-            </pre>
-
-            <p>
-            Each calculation uses basic arithmetic and meaningful variable names
-            to improve readability and maintainability.
-            </p>
-
-            <h4>Displaying Results</h4>
-            <pre class="bg-light p-3">
-            mpg_label.config(text=f"Miles per Gallon: {mpg:.2f}")
-            </pre>
-
-            <p>
-            The <code>.config()</code> method changes the text displayed in a Label.
-            Using formatted strings (<code>f-strings</code>) ensures results appear
-            with exactly two decimal places.
-            </p>
+        <div class="card-body" id="explanation">
+            <h2>Code Explanation</h2>
+            <div id="import-library">
+                <h3>Importing Tkinter</h3>
+<pre class="bg-light p-3"><code>
+    from tkinter import *</code></pre>
+                <p>
+                    This line imports everything from the <code>tkinter</code> module so we can easily use
+                    widgets like <code>Label</code>, <code>Entry</code>, <code>Button</code>, and <code>Tk</code>.
+                </p>
+                <p>
+                    Tkinter is Python's standard GUI library and is included with Python installations.
+                </p>
+            </div> <!-- End of import-library -->
 
             <hr>
 
-            <h3>Exit Button Handler</h3>
-            <pre class="bg-light p-3">
-            def exit_program():
-                frm.destroy()
-            </pre>
+            <div id="event-handlers">
+                <h3>Event Handler Functions</h3>
 
-            <p>
-            This function is called when the Exit button is clicked.
-            It closes the application window and ends the program.
-            </p>
+                <div id="calculate-mpg-handler">
+                    <h4>The Calculate Button Handler</h4>
+                    <pre class="bg-light p-3"><code>
+    def calculate_mpg():</code></pre>
+
+                    <p>
+                        This function is an <strong>event handler</strong>. It is not executed immediately.
+                        Instead, it runs only when the user clicks the <strong>Calculate MPG</strong> button.
+                    </p>
+
+                    <h5>Getting User Input</h5>
+                    <pre class="bg-light p-3"><code>
+    miles = float(miles_entry.get())
+    gallons = float(gallons_entry.get())</code></pre>
+
+                    <p>
+                        The <code>.get()</code> method retrieves text from an Entry widget.
+                        Because Entry widgets store text, the values must be converted to
+                        <code>float</code> before performing calculations.
+                    </p>
+
+                    <h5>Performing Calculations</h5>
+                    </pre class="bg-light p-3"><code>
+    mpg = miles / gallons
+    cost_per_gallon = float(cost_entry.get())
+    total_cost = gallons * cost_per_gallon
+    cost_per_mile = total_cost / miles</code></pre>
+
+                    <p>
+                        Each calculation uses basic arithmetic and meaningful variable names
+                        to improve readability and maintainability.
+                    </p>
+
+                    <h5>Displaying Results</h5>
+                    <pre class="bg-light p-3"><code>
+    mpg_label.config(text=f"Miles per Gallon: {mpg:.2f}")</pre></code>
+
+                    <p>
+                        The <code>.config()</code> method changes the text displayed in a Label.
+                        Using formatted strings (<code>f-strings</code>) ensures results appear
+                        with exactly two decimal places.
+                    </p>
+                </div> <!-- End of calculate-mpg-handler -->
+
+                <div id="exit-program-handler">
+                    <h4>Exit Button Handler</h4>
+                    <pre class="bg-light p-3"><code>
+    def exit_program():
+        frm.destroy()</pre></code>
+
+                    <p>
+                        This function is called when the Exit button is clicked.
+                        It closes the application window and ends the program.
+                    </p>
+                </div> <!-- End of exit-program-handler -->
+            </div> <!-- End of event-handlers -->
 
             <hr>
 
+            <div id="main-window">
             <h2>Creating the Main Window</h2>
             <pre class="bg-light p-3">
             frm = Tk()
