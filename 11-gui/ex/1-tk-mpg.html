@@ -1,0 +1,278 @@
+<div class="container">
+    <div class="card mb-4">
+        <div class="card-body">
+<h2>Event‑Driven Programming with Tkinter</h2>
+
+<hr>
+
+<h2>Purpose of This Program</h2>
+<p>
+This program demonstrates how to build an <strong>event‑driven graphical user interface (GUI)</strong>
+using Python’s <code>tkinter</code> module. Instead of running from top to bottom like a
+traditional console program, this application waits for the user to take an action
+(such as clicking a button). When that action occurs, a specific function is executed.
+</p>
+
+<p>
+The program calculates:
+</p>
+<ul>
+    <li>Miles per Gallon (MPG)</li>
+    <li>Total fuel cost</li>
+    <li>Cost per mile</li>
+</ul>
+
+<p>
+All calculations are triggered by the user clicking the <strong>Calculate MPG</strong> button.
+</p>
+
+<hr>
+
+<h2>What Does “Event‑Driven” Mean?</h2>
+<p>
+In an <strong>event‑driven program</strong>, the flow of execution is controlled by events
+such as:
+</p>
+<ul>
+    <li>Button clicks</li>
+    <li>Keyboard input</li>
+    <li>Mouse movement</li>
+</ul>
+
+<p>
+Unlike console programs that follow a fixed sequence of statements, a GUI program:
+</p>
+<ul>
+    <li>Displays a window</li>
+    <li>Waits for the user to act</li>
+    <li>Responds by running an <strong>event handler</strong> (also called a callback function)</li>
+</ul>
+
+<hr>
+
+<h2>High‑Level Program Structure</h2>
+<p>
+This program follows a common GUI pattern:
+</p>
+
+<ol>
+    <li>Import the GUI library</li>
+    <li>Define event handler functions</li>
+    <li>Create the main window</li>
+    <li>Add widgets (labels, entries, buttons)</li>
+    <li>Start the event loop</li>
+</ol>
+
+<hr>
+
+<h2>Importing Tkinter</h2>
+<pre>
+from tkinter import *
+</pre>
+
+<p>
+This line imports everything from the <code>tkinter</code> module so we can easily use
+widgets like <code>Label</code>, <code>Entry</code>, <code>Button</code>, and <code>Tk</code>.
+</p>
+
+<p>
+Tkinter is Python’s standard GUI library and is included with Python installations.
+</p>
+
+<hr>
+
+<h2>Event Handler Functions</h2>
+
+<h3>The Calculate Button Handler</h3>
+<pre>
+def calculate_mpg():
+</pre>
+
+<p>
+This function is an <strong>event handler</strong>. It is not executed immediately.
+Instead, it runs only when the user clicks the <strong>Calculate MPG</strong> button.
+</p>
+
+<h4>Getting User Input</h4>
+<pre>
+miles = float(miles_entry.get())
+gallons = float(gallons_entry.get())
+</pre>
+
+<p>
+The <code>.get()</code> method retrieves text from an Entry widget.
+Because Entry widgets store text, the values must be converted to
+<code>float</code> before performing calculations.
+</p>
+
+<h4>Performing Calculations</h4>
+<pre>
+mpg = miles / gallons
+cost_per_gallon = float(cost_entry.get())
+total_cost = gallons * cost_per_gallon
+cost_per_mile = total_cost / miles
+</pre>
+
+<p>
+Each calculation uses basic arithmetic and meaningful variable names
+to improve readability and maintainability.
+</p>
+
+<h4>Displaying Results</h4>
+<pre>
+mpg_label.config(text=f"Miles per Gallon: {mpg:.2f}")
+</pre>
+
+<p>
+The <code>.config()</code> method changes the text displayed in a Label.
+Using formatted strings (<code>f-strings</code>) ensures results appear
+with exactly two decimal places.
+</p>
+
+<hr>
+
+<h3>Exit Button Handler</h3>
+<pre>
+def exit_program():
+    frm.destroy()
+</pre>
+
+<p>
+This function is called when the Exit button is clicked.
+It closes the application window and ends the program.
+</p>
+
+<hr>
+
+<h2>Creating the Main Window</h2>
+<pre>
+frm = Tk()
+frm.title("MPG Calculator")
+frm.geometry("450x200")
+</pre>
+
+<p>
+This creates the main application window.
+</p>
+
+<ul>
+    <li><code>Tk()</code> creates the window</li>
+    <li><code>.title()</code> sets the window title</li>
+    <li><code>.geometry()</code> controls the window size</li>
+</ul>
+
+<hr>
+
+<h2>Widgets: Labels and Entry Fields</h2>
+<p>
+Widgets are the building blocks of a GUI.
+This program uses:
+</p>
+<ul>
+    <li><strong>Labels</strong> to display text</li>
+    <li><strong>Entry</strong> widgets for user input</li>
+</ul>
+
+<pre>
+miles_label = Label(frm, text="Miles Driven:")
+miles_entry = Entry(frm, width=8)
+</pre>
+
+<p>
+Each widget is attached to the main window (<code>frm</code>).
+</p>
+
+<hr>
+
+<h2>Layout Management with Grid</h2>
+<pre>
+miles_label.grid(row=0, column=0)
+miles_entry.grid(row=0, column=1)
+</pre>
+
+<p>
+The <code>grid()</code> layout manager organizes widgets into rows and columns,
+similar to a table.
+</p>
+
+<p>
+Using <code>grid()</code> makes the interface clean, aligned, and easy to adjust.
+</p>
+
+<hr>
+
+<h2>Buttons and Commands</h2>
+<pre>
+calculate_button = Button(frm, text="Calculate MPG", command=calculate_mpg)
+exit_button = Button(frm, text="Exit", command=exit_program)
+</pre>
+
+<p>
+Buttons connect user actions to program behavior.
+The <code>command</code> parameter specifies which function runs when the button is clicked.
+</p>
+
+<p>
+This is the key connection between the GUI and the event‑driven logic.
+</p>
+
+<hr>
+
+<h2>The Main Event Loop</h2>
+<pre>
+frm.mainloop()
+</pre>
+
+<p>
+This line starts the <strong>event loop</strong>.
+</p>
+
+<ul>
+    <li>The window appears on the screen</li>
+    <li>The program waits for user actions</li>
+    <li>Button clicks trigger their assigned functions</li>
+</ul>
+
+<p>
+Without <code>mainloop()</code>, the window would open and immediately close.
+</p>
+
+<hr>
+
+<h2>Why This Design Matters</h2>
+<p>
+This program demonstrates important software development concepts:
+</p>
+
+<ul>
+    <li>Separation of logic and interface</li>
+    <li>Readable, modular code</li>
+    <li>Event‑driven thinking</li>
+    <li>User‑friendly interaction</li>
+</ul>
+
+<p>
+These concepts scale directly to professional desktop applications,
+web applications, and mobile apps.
+</p>
+
+<hr>
+
+<h2>Summary</h2>
+<p>
+The MPG Calculator shows how Python can:
+</p>
+
+<ul>
+    <li>Collect user input via a GUI</li>
+    <li>Respond dynamically to user actions</li>
+    <li>Perform calculations only when needed</li>
+    <li>Present results clearly and professionally</li>
+</ul>
+
+<p>
+Understanding this example prepares you for more advanced GUI programs
+and real‑world, event‑driven software development.
+</p>
+        </div> <!-- End of card -->
+</div> <!-- End of container -->
