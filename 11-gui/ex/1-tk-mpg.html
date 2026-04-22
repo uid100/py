@@ -1,68 +1,104 @@
 <div class="container">
+    <h2>Event‑Driven Programming with Tkinter</h2>
     <div class="card mb-4">
+        <div class="card-header">
+            <h3>MPG Calculator GUI</h3>
+        </div> <!-- End of card header -->
         <div class="card-body">
-<h2>Event‑Driven Programming with Tkinter</h2>
+            <h4>Program Overview</h4>
+            <p>
+                This program demonstrates how to build an <strong>event-driven 
+                graphical user interface (GUI)</strong> using Python's 
+                <code>tkinter</code> module.
+            </p>
+            <p>
+                Instead of running from top to bottom like a traditional console 
+                program, this application waits for the user to take an action 
+                (such as clicking a button). When that action occurs, a specific 
+                function is executed.
+            </p>
+            <p>
+                The program calculates:
+            </p>
+            <ul>
+                <li>Miles per Gallon (MPG)</li>
+                <li>Total fuel cost</li>
+                <li>Cost per mile</li>
+            </ul>
 
-<hr>
+            <p>
+                All calculations are triggered by the user clicking the 
+                <strong>Calculate MPG</strong> button.
+            </p>
 
-<h2>Purpose of This Program</h2>
-<p>
-This program demonstrates how to build an <strong>event‑driven graphical user interface (GUI)</strong>
-using Python’s <code>tkinter</code> module. Instead of running from top to bottom like a
-traditional console program, this application waits for the user to take an action
-(such as clicking a button). When that action occurs, a specific function is executed.
-</p>
+            <hr>
 
-<p>
-The program calculates:
-</p>
-<ul>
-    <li>Miles per Gallon (MPG)</li>
-    <li>Total fuel cost</li>
-    <li>Cost per mile</li>
-</ul>
+            <h4>What Does “Event-Driven” Mean?</h4>
+            <p>
+                In an <strong>event-driven program</strong>, the flow of execution 
+                is controlled by events such as:
+            </p>
+            <ul>
+                <li>Button clicks</li>
+                <li>Keyboard input</li>
+                <li>Mouse movement</li>
+            </ul>
 
-<p>
-All calculations are triggered by the user clicking the <strong>Calculate MPG</strong> button.
-</p>
+            <p>
+                Unlike console programs that follow a fixed sequence of statements, 
+                a GUI program:
+            </p>
+            <ul>
+                <li>Displays a window</li>
+                <li>Waits for the user to act</li>
+                <li>Responds by running an <strong>event handler</strong> (also 
+                    called a callback function)</li>
+            </ul>
 
-<hr>
+            <hr>
 
-<h2>What Does “Event‑Driven” Mean?</h2>
-<p>
-In an <strong>event‑driven program</strong>, the flow of execution is controlled by events
-such as:
-</p>
-<ul>
-    <li>Button clicks</li>
-    <li>Keyboard input</li>
-    <li>Mouse movement</li>
-</ul>
+            <h2>High-Level Program Structure</h2>
+            <p>
+                This program follows a common GUI pattern:
+            </p>
 
-<p>
-Unlike console programs that follow a fixed sequence of statements, a GUI program:
-</p>
-<ul>
-    <li>Displays a window</li>
-    <li>Waits for the user to act</li>
-    <li>Responds by running an <strong>event handler</strong> (also called a callback function)</li>
-</ul>
+            <ol>
+                <li>Import the GUI library</li>
+                <li>Define event handler functions</li>
+                <li>Create the main window</li>
+                <li>Add widgets (labels, entries, buttons)</li>
+                <li>Start the event loop</li>
+            </ol>
+        </div> <!-- End of card body -->
+    </div> <!-- End of card -->
 
-<hr>
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3>Python Code</h3>
+        </div> <!-- End of card header -->
+        <div class="card-body">
+            <h4>Code listing</h4>>
+            <p>
+                In this guided exercise, copy the provided code into your Python environment
+                and run it to see how the GUI works. Pay attention to how each part of the 
+                code contributes to the overall functionality of the MPG Calculator.
+            </p>
+            <p>
+                The detailed explanation of the code will follow in the next section.
+            </p>
+            <p>
+                <img src="uid100.github.io/py/images/mpg_gui_pt1.png"
+                        alt="MPG Calculator GUI code listing part 1 of 3"
+                        class="img-fluid">
+                <img src="uid100.github.io/py/images/mpg_gui_pt2.png"
+                        alt="MPG Calculator GUI code listing part 2 of 3"
+                        class="img-fluid">
+                <img src="uid100.github.io/py/images/mpg_gui_pt3.png"
+                        alt="MPG Calculator GUI code listing part 3 of 3"
+                        class="img-fluid">
 
-<h2>High‑Level Program Structure</h2>
-<p>
-This program follows a common GUI pattern:
-</p>
-
-<ol>
-    <li>Import the GUI library</li>
-    <li>Define event handler functions</li>
-    <li>Create the main window</li>
-    <li>Add widgets (labels, entries, buttons)</li>
-    <li>Start the event loop</li>
-</ol>
-
+            </p>
+    </div>
 <hr>
 
 <h2>Importing Tkinter</h2>
@@ -247,8 +283,8 @@ This program demonstrates important software development concepts:
 <ul>
     <li>Separation of logic and interface</li>
     <li>Readable, modular code</li>
-    <li>Event‑driven thinking</li>
-    <li>User‑friendly interaction</li>
+    <li>Event-driven thinking</li>
+    <li>User-friendly interaction</li>
 </ul>
 
 <p>
@@ -272,7 +308,7 @@ The MPG Calculator shows how Python can:
 
 <p>
 Understanding this example prepares you for more advanced GUI programs
-and real‑world, event‑driven software development.
+and real-world, event-driven software development.
 </p>
-        </div> <!-- End of card -->
+    </div> <!-- End of card -->
 </div> <!-- End of container -->
