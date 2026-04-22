@@ -74,7 +74,7 @@
         <div class="card-body">
             <h4>Importing Tkinter</h4>
             <pre class="bg-light p-3">
-                from tkinter import *
+            from tkinter import *
             </pre>
 
             <p>
@@ -89,7 +89,7 @@
             <h4>Event Handler Functions</h4>
 
             <h3>The Calculate Button Handler</h3>
-            <pre>
+            <pre class="bg-light p-3">
             def calculate_mpg():
             </pre>
 
@@ -99,7 +99,7 @@
             </p>
 
             <h4>Getting User Input</h4>
-            <pre>
+            <pre class="bg-light p-3">
             miles = float(miles_entry.get())
             gallons = float(gallons_entry.get())
             </pre>
@@ -111,7 +111,7 @@
             </p>
 
             <h4>Performing Calculations</h4>
-            <pre>
+            <pre class="bg-light p-3">
             mpg = miles / gallons
             cost_per_gallon = float(cost_entry.get())
             total_cost = gallons * cost_per_gallon
@@ -124,7 +124,7 @@
             </p>
 
             <h4>Displaying Results</h4>
-            <pre>
+            <pre class="bg-light p-3">
             mpg_label.config(text=f"Miles per Gallon: {mpg:.2f}")
             </pre>
 
@@ -137,7 +137,7 @@
             <hr>
 
             <h3>Exit Button Handler</h3>
-            <pre>
+            <pre class="bg-light p-3">
             def exit_program():
                 frm.destroy()
             </pre>
@@ -150,7 +150,7 @@
             <hr>
 
             <h2>Creating the Main Window</h2>
-            <pre>
+            <pre class="bg-light p-3">
             frm = Tk()
             frm.title("MPG Calculator")
             frm.geometry("450x200")
@@ -178,7 +178,7 @@
                 <li><strong>Entry</strong> widgets for user input</li>
             </ul>
 
-            <pre>
+            <pre class="bg-light p-3">
             miles_label = Label(frm, text="Miles Driven:")
             miles_entry = Entry(frm, width=8)
             </pre>
@@ -190,7 +190,7 @@
             <hr>
 
             <h2>Layout Management with Grid</h2>
-            <pre>
+            <pre class="bg-light p-3">
             miles_label.grid(row=0, column=0)
             miles_entry.grid(row=0, column=1)
             </pre>
@@ -207,7 +207,7 @@
             <hr>
 
             <h2>Buttons and Commands</h2>
-            <pre>
+            <pre class="bg-light p-3">
             calculate_button = Button(frm, text="Calculate MPG", command=calculate_mpg)
             exit_button = Button(frm, text="Exit", command=exit_program)
             </pre>
@@ -224,7 +224,7 @@
             <hr>
 
             <h2>The Main Event Loop</h2>
-            <pre>
+            <pre class="bg-light p-3">
             frm.mainloop()
             </pre>
 
