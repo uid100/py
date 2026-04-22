@@ -1,31 +1,47 @@
 <div class="card">
-    <div class="card-header">Class Inheritance</div>
+    <div class="card-header">Event-Driven Programming</div>
     <div class="card-body">
         <div id="overview" style="padding: 20px;">
-            <h2 class="alert">Lab #10</h2>
+            <h3 class="alert">Lab #11</h3>
             <div id="introduction">
                 <p>
-                    This lab will give you some hands-on experience creating user-defined classes 
-                    using inheritance in Python and creating instances in a <em>test fixture</em> application. 
-                    Classes such as these are commonly implemented, tested and debugged in a small scale test 
-                    environment and then later integrated into a larger scale project.
+                    In this lab, we'll explore writing event-driven graphical user interface 
+                    (GUI) using Python's tkinter and matplotlib modules.
                 </p>
-                <p class="boxed-paragraph" style="font-style: italic;">
-                    Don't forget to export your design diagrams as jpeg image files!
+                <p>
+                    Instead of running from top to bottom like a traditional console program, 
+                    event-driven code waits for the user to take an action (such as clicking a 
+                    button). When that action occurs, a specific function is executed.
                 </p>
             </div>
             <div id="objectives" style="padding: 40px;">
                 <ul>Objectives:
-                    <li>Classes and objects</li>
-                    <li>Implementing class models</li>
-                    <li>Protected access</li>
-                    <li>Inheritance &ndash; superclasses and subclasses</li>
-                    <li>Class constructors</li>
-                    <li>Class get() and set() methods</li>
-                    <li>Abstract methods</li>
-                    <li>Overriding methods</li>
+                    <li>Understand the concept of event-driven programming</li>
+                    <li>Create a simple GUI application using tkinter</li>
+                    <li>Handle user interactions with event handlers</li>
                 </ul>
             </div>
+            <h4>What Does “Event-Driven” Mean?</h4>
+            <p>
+                In an <strong>event-driven program</strong>, the flow of execution 
+                is controlled by events such as:
+            </p>
+            <ul>
+                <li>Button clicks</li>
+                <li>Keyboard input</li>
+                <li>Mouse movement</li>
+            </ul>
+
+            <p>
+                Unlike console programs that follow a fixed sequence of statements, 
+                a GUI program:
+            </p>
+            <ul>
+                <li>Displays a window</li>
+                <li>Waits for the user to act</li>
+                <li>Responds by running an <strong>event handler</strong> (also 
+                    called a callback function)</li>
+            </ul>
         </div>
     </div>  <!-- card-body -->
 </div> <!-- card -->
